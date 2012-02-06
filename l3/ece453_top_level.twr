@@ -1,0 +1,339 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+C:/Users/CCS/Documents/lab2/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml ece453_top_level.twx ece453_top_level.ncd -o
+ece453_top_level.twr ece453_top_level.pcf
+
+Design file:              ece453_top_level.ncd
+Physical constraint file: ece453_top_level.pcf
+Device,package,speed:     xc3s1500,fg676,-4 (PRODUCTION 1.39 2010-11-18)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock MZB_CPLD_CLK0
+--------------+------------+------------+------------------+--------+
+              |Max Setup to|Max Hold to |                  | Clock  |
+Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------------+--------+
+MZB_A<0>      |   12.449(R)|   -2.537(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<1>      |   12.397(R)|   -2.495(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<2>      |    9.620(R)|   -0.334(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<3>      |    9.557(R)|    0.594(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<4>      |    8.603(R)|    0.897(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<5>      |   11.402(R)|   -1.700(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<6>      |   10.749(R)|   -1.177(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<7>      |   11.064(R)|   -1.429(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<8>      |   10.512(R)|   -0.988(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<9>      |   11.458(R)|   -1.743(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<10>     |   10.482(R)|   -0.963(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<11>     |   10.872(R)|   -1.274(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<12>     |   10.761(R)|   -1.186(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<13>     |   10.847(R)|   -1.256(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<14>     |   11.705(R)|   -1.941(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<15>     |   11.876(R)|   -2.078(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<16>     |   11.487(R)|   -1.766(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<17>     |   11.493(R)|   -1.771(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<18>     |   11.067(R)|   -1.431(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<19>     |   11.136(R)|   -1.486(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<20>     |   10.703(R)|   -1.139(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<21>     |   11.320(R)|   -1.634(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<22>     |   10.798(R)|   -1.215(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_A<23>     |   10.870(R)|   -1.274(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_CPLD_AS   |    6.924(R)|   -0.399(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_CPLD_BE0_B|   12.249(R)|    0.053(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_CPLD_BE1_B|   11.629(R)|    0.887(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_CPLD_BE2_B|    7.555(R)|    0.368(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_CPLD_BE3_B|    7.227(R)|   -0.320(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<0>      |   -0.020(R)|    1.776(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<1>      |   -0.139(R)|    1.920(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<2>      |    0.177(R)|    2.039(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<3>      |    0.082(R)|    2.204(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<4>      |   -0.016(R)|    2.187(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<5>      |    0.450(R)|    2.000(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<6>      |   -0.073(R)|    2.139(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<7>      |    0.280(R)|    1.811(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<8>      |    4.222(R)|    0.283(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<9>      |    2.619(R)|    0.645(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<10>     |    3.478(R)|    0.229(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<11>     |    4.045(R)|    0.355(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<12>     |    3.623(R)|    0.585(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<13>     |    3.455(R)|   -0.213(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<14>     |    2.863(R)|    0.420(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<15>     |    3.271(R)|   -0.091(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<16>     |    2.885(R)|    0.098(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<17>     |    3.410(R)|    0.252(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<18>     |    4.865(R)|    0.359(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<19>     |    2.616(R)|    0.734(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<20>     |    2.943(R)|    0.934(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<21>     |    3.764(R)|    0.641(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<22>     |    3.158(R)|    0.730(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<23>     |    3.999(R)|    0.031(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<24>     |    2.474(R)|    0.417(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<25>     |    3.225(R)|    0.402(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<26>     |    1.541(R)|    0.866(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<27>     |    2.477(R)|    1.137(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<28>     |    2.898(R)|    0.814(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<29>     |    3.731(R)|    0.739(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<30>     |    3.001(R)|    0.727(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<31>     |    4.105(R)|   -0.534(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+--------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock MZB_CPLD_RS5_B
+--------------+------------+------------+-------------------+--------+
+              |Max Setup to|Max Hold to |                   | Clock  |
+Source        | clk (edge) | clk (edge) |Internal Clock(s)  | Phase  |
+--------------+------------+------------+-------------------+--------+
+MZB_A<0>      |    8.889(F)|   -3.341(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<1>      |    8.837(F)|   -3.299(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<2>      |    7.156(F)|   -0.795(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<3>      |    7.216(F)|   -1.001(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<4>      |    5.493(F)|   -0.066(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<5>      |    7.842(F)|   -2.504(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<6>      |    7.189(F)|   -1.981(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<7>      |    7.504(F)|   -2.233(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<8>      |    6.952(F)|   -1.792(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<9>      |    7.898(F)|   -2.547(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<10>     |    6.922(F)|   -1.767(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<11>     |    7.312(F)|   -2.078(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<12>     |    7.201(F)|   -1.990(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<13>     |    7.287(F)|   -2.060(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<14>     |    8.145(F)|   -2.745(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<15>     |    8.316(F)|   -2.882(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<16>     |    7.927(F)|   -2.570(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<17>     |    7.933(F)|   -2.575(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<18>     |    7.507(F)|   -2.235(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<19>     |    7.576(F)|   -2.290(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<20>     |    7.143(F)|   -1.943(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<21>     |    7.760(F)|   -2.438(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<22>     |    7.238(F)|   -2.019(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_A<23>     |    7.310(F)|   -2.078(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_CPLD_AS   |    3.856(F)|    0.269(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+MZB_CPLD_BE3_B|    4.001(F)|    0.153(F)|MZB_CPLD_RS5_B_IBUF|   0.000|
+--------------+------------+------------+-------------------+--------+
+
+Setup/Hold to clock MZB_CPLD_WS5_B
+--------------+------------+------------+-------------------+--------+
+              |Max Setup to|Max Hold to |                   | Clock  |
+Source        | clk (edge) | clk (edge) |Internal Clock(s)  | Phase  |
+--------------+------------+------------+-------------------+--------+
+MZB_A<0>      |    7.833(R)|   -3.516(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<1>      |    7.781(R)|   -3.474(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<2>      |    6.100(R)|   -0.970(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<3>      |    6.160(R)|   -1.176(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<4>      |    4.437(R)|   -0.241(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<5>      |    6.786(R)|   -2.679(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<6>      |    6.133(R)|   -2.156(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<7>      |    6.448(R)|   -2.408(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<8>      |    5.896(R)|   -1.967(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<9>      |    6.842(R)|   -2.722(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<10>     |    5.866(R)|   -1.942(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<11>     |    6.256(R)|   -2.253(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<12>     |    6.145(R)|   -2.165(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<13>     |    6.231(R)|   -2.235(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<14>     |    7.089(R)|   -2.920(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<15>     |    7.260(R)|   -3.057(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<16>     |    6.871(R)|   -2.745(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<17>     |    6.877(R)|   -2.750(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<18>     |    6.451(R)|   -2.410(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<19>     |    6.520(R)|   -2.465(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<20>     |    6.087(R)|   -2.118(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<21>     |    6.704(R)|   -2.613(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<22>     |    6.182(R)|   -2.194(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_A<23>     |    6.254(R)|   -2.253(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_CPLD_AS   |    2.800(R)|    0.094(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+MZB_CPLD_BE3_B|    3.368(R)|   -0.360(R)|MZB_CPLD_WS5_B_IBUF|   0.000|
+--------------+------------+------------+-------------------+--------+
+
+Clock MZB_CPLD_CLK0 to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+MZB_D<0>    |   10.813(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<1>    |   10.571(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<2>    |   10.153(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<3>    |   10.800(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<4>    |   10.178(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<5>    |   10.474(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<6>    |   10.550(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<7>    |   10.951(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<8>    |   10.111(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<9>    |   10.147(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<10>   |   10.732(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<11>   |   11.050(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<12>   |   10.855(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<13>   |   11.189(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<14>   |   10.939(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<15>   |   11.042(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<16>   |   10.180(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<17>   |   10.222(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<18>   |   10.681(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<19>   |   10.501(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<20>   |   10.170(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<21>   |   10.553(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<22>   |   10.453(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<23>   |   10.616(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<24>   |   11.433(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<25>   |   11.064(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<26>   |   10.874(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<27>   |   10.079(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<28>   |   10.132(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<29>   |   10.194(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<30>   |   10.567(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+MZB_D<31>   |   10.882(R)|MZB_CPLD_CLK0_IBUF|   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock MZB_CPLD_CLK0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+MZB_CPLD_CLK0  |    7.849|         |         |         |
+MZB_CPLD_RS5_B |    7.647|    7.647|         |         |
+MZB_CPLD_WS5_B |    7.668|    7.633|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock MZB_CPLD_RS5_B
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+MZB_CPLD_RS5_B |         |         |         |    4.033|
+MZB_CPLD_WS5_B |         |         |    3.531|    3.531|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock MZB_CPLD_WS5_B
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+MZB_CPLD_RS5_B |    2.680|    2.680|         |         |
+MZB_CPLD_WS5_B |    4.106|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+----------------+---------+
+Source Pad     |Destination Pad |  Delay  |
+---------------+----------------+---------+
+MZB_A<0>       |ACC_PORT_PIN<17>|    9.684|
+MZB_A<1>       |ACC_PORT_PIN<18>|   10.535|
+MZB_A<2>       |ACC_PORT_PIN<19>|   10.915|
+MZB_CPLD_AS    |MZB_D<0>        |    9.827|
+MZB_CPLD_AS    |MZB_D<1>        |    9.419|
+MZB_CPLD_AS    |MZB_D<2>        |   10.557|
+MZB_CPLD_AS    |MZB_D<3>        |   10.482|
+MZB_CPLD_AS    |MZB_D<4>        |   10.919|
+MZB_CPLD_AS    |MZB_D<5>        |   11.212|
+MZB_CPLD_AS    |MZB_D<6>        |   11.658|
+MZB_CPLD_AS    |MZB_D<7>        |   12.038|
+MZB_CPLD_AS    |MZB_D<8>        |   12.306|
+MZB_CPLD_AS    |MZB_D<9>        |   12.777|
+MZB_CPLD_AS    |MZB_D<10>       |   12.668|
+MZB_CPLD_AS    |MZB_D<11>       |   12.778|
+MZB_CPLD_AS    |MZB_D<12>       |   13.156|
+MZB_CPLD_AS    |MZB_D<13>       |   13.157|
+MZB_CPLD_AS    |MZB_D<14>       |   13.516|
+MZB_CPLD_AS    |MZB_D<15>       |   13.517|
+MZB_CPLD_AS    |MZB_D<16>       |    9.807|
+MZB_CPLD_AS    |MZB_D<17>       |    9.419|
+MZB_CPLD_AS    |MZB_D<18>       |    9.807|
+MZB_CPLD_AS    |MZB_D<19>       |   10.187|
+MZB_CPLD_AS    |MZB_D<20>       |    9.827|
+MZB_CPLD_AS    |MZB_D<21>       |   10.842|
+MZB_CPLD_AS    |MZB_D<22>       |   10.558|
+MZB_CPLD_AS    |MZB_D<23>       |   11.279|
+MZB_CPLD_AS    |MZB_D<24>       |   11.213|
+MZB_CPLD_AS    |MZB_D<25>       |   11.574|
+MZB_CPLD_AS    |MZB_D<26>       |   11.660|
+MZB_CPLD_AS    |MZB_D<27>       |   12.038|
+MZB_CPLD_AS    |MZB_D<28>       |   12.398|
+MZB_CPLD_AS    |MZB_D<29>       |   12.778|
+MZB_CPLD_AS    |MZB_D<30>       |   13.009|
+MZB_CPLD_AS    |MZB_D<31>       |   13.157|
+MZB_CPLD_BE0_B |ACC_PORT_PIN<12>|   13.962|
+MZB_CPLD_BE1_B |ACC_PORT_PIN<13>|   13.294|
+MZB_CPLD_BE2_B |ACC_PORT_PIN<14>|   13.016|
+MZB_CPLD_BE3_B |ACC_PORT_PIN<15>|   14.493|
+MZB_CPLD_CLK0  |ACC_PORT_PIN<9> |    9.935|
+MZB_CPLD_RS5_B |ACC_PORT_PIN<10>|    9.063|
+MZB_CPLD_RS5_B |MZB_D<0>        |   10.276|
+MZB_CPLD_RS5_B |MZB_D<1>        |    9.868|
+MZB_CPLD_RS5_B |MZB_D<2>        |   11.006|
+MZB_CPLD_RS5_B |MZB_D<3>        |   10.931|
+MZB_CPLD_RS5_B |MZB_D<4>        |   11.368|
+MZB_CPLD_RS5_B |MZB_D<5>        |   11.661|
+MZB_CPLD_RS5_B |MZB_D<6>        |   12.107|
+MZB_CPLD_RS5_B |MZB_D<7>        |   12.487|
+MZB_CPLD_RS5_B |MZB_D<8>        |   12.755|
+MZB_CPLD_RS5_B |MZB_D<9>        |   13.226|
+MZB_CPLD_RS5_B |MZB_D<10>       |   13.117|
+MZB_CPLD_RS5_B |MZB_D<11>       |   13.227|
+MZB_CPLD_RS5_B |MZB_D<12>       |   13.605|
+MZB_CPLD_RS5_B |MZB_D<13>       |   13.606|
+MZB_CPLD_RS5_B |MZB_D<14>       |   13.965|
+MZB_CPLD_RS5_B |MZB_D<15>       |   13.966|
+MZB_CPLD_RS5_B |MZB_D<16>       |   10.256|
+MZB_CPLD_RS5_B |MZB_D<17>       |    9.868|
+MZB_CPLD_RS5_B |MZB_D<18>       |   10.256|
+MZB_CPLD_RS5_B |MZB_D<19>       |   10.636|
+MZB_CPLD_RS5_B |MZB_D<20>       |   10.276|
+MZB_CPLD_RS5_B |MZB_D<21>       |   11.291|
+MZB_CPLD_RS5_B |MZB_D<22>       |   11.007|
+MZB_CPLD_RS5_B |MZB_D<23>       |   11.728|
+MZB_CPLD_RS5_B |MZB_D<24>       |   11.662|
+MZB_CPLD_RS5_B |MZB_D<25>       |   12.023|
+MZB_CPLD_RS5_B |MZB_D<26>       |   12.109|
+MZB_CPLD_RS5_B |MZB_D<27>       |   12.487|
+MZB_CPLD_RS5_B |MZB_D<28>       |   12.847|
+MZB_CPLD_RS5_B |MZB_D<29>       |   13.227|
+MZB_CPLD_RS5_B |MZB_D<30>       |   13.458|
+MZB_CPLD_RS5_B |MZB_D<31>       |   13.606|
+MZB_CPLD_WS5_B |ACC_PORT_PIN<11>|    9.783|
+MZB_D<0>       |ACC_PORT_PIN<20>|   12.129|
+MZB_D<8>       |ACC_PORT_PIN<21>|   10.687|
+MZB_D<16>      |ACC_PORT_PIN<22>|    9.852|
+MZB_D<24>      |ACC_PORT_PIN<23>|   10.531|
+---------------+----------------+---------+
+
+
+Analysis completed Thu Feb 02 17:42:55 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 172 MB
+
+
+

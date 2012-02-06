@@ -1,0 +1,33 @@
+Release 12.4 - xst M.81d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/CCS/Documents/lab2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/CCS/Documents/lab2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "src/reg_file.v" in library work
+ERROR:HDLCompilers:26 - "src/reg_file.v" line 46 unexpected token: '4'
+ERROR:HDLCompilers:26 - "src/reg_file.v" line 48 unexpected token: '4'
+ERROR:HDLCompilers:26 - "src/reg_file.v" line 50 unexpected token: '4'
+Module <reg_file> compiled
+Analysis of file <"reg_file.prj"> failed.
+--> 
+
+Total memory usage is 203476 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
