@@ -1,12 +1,12 @@
 Release 12.4 - xst M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/CCS/Documents/lab2/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/vmware-shared/sandbox/ece453/l3/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
---> Parameter xsthdpdir set to C:/Users/CCS/Documents/lab2/xst
+--> Parameter xsthdpdir set to C:/vmware-shared/sandbox/ece453/l3/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -18,16 +18,20 @@ Total CPU time to Xst completion: 0.09 secs
 *                          HDL Compilation                              *
 =========================================================================
 Compiling verilog file "src/reg_file.v" in library work
-ERROR:HDLCompilers:26 - "src/reg_file.v" line 46 unexpected token: '4'
-ERROR:HDLCompilers:26 - "src/reg_file.v" line 48 unexpected token: '4'
-ERROR:HDLCompilers:26 - "src/reg_file.v" line 50 unexpected token: '4'
 Module <reg_file> compiled
-Analysis of file <"reg_file.prj"> failed.
+No errors in compilation
+Analysis of file <"reg_file.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
 --> 
 
-Total memory usage is 203476 kilobytes
+Total memory usage is 202964 kilobytes
 
-Number of errors   :    3 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
