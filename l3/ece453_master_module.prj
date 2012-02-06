@@ -1,4 +1,3 @@
 verilog work "src/shift_reg.v"
 verilog work "src/reg_file.v"
 verilog work "src/ece453_master_module.v"
-verilog work "src/ece453_top_level.v"

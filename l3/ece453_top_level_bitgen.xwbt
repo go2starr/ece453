@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\CCS\Documents\lab2\ece453_top_level.ncd
-OUTFILE=C:\Users\CCS\Documents\lab2\ece453_top_level.bit
+INFILE=C:\vmware-shared\sandbox\ece453\l3\ece453_top_level.ncd
+OUTFILE=C:\vmware-shared\sandbox\ece453\l3\ece453_top_level.bit
 FAMILY=Spartan3
 PART=xc3s1500-4fg676
-WORKINGDIR=C:\Users\CCS\Documents\lab2
+WORKINGDIR=C:\vmware-shared\sandbox\ece453\l3
 LICENSE=ISE
 USER_INFO=203016412_208600441_600

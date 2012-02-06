@@ -1,7 +1,7 @@
 Release 12.4 par M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-ECELABS-54-HP::  Thu Feb 02 17:42:46 2012
+ECELABS-54-HP::  Mon Feb 06 16:59:33 2012
 
 par -filter iseconfig/filter.filter -w -intstyle ise -ol high -t 1
 ece453_top_level_map.ncd ece453_top_level.ncd ece453_top_level.pcf 
@@ -20,12 +20,12 @@ Device speed data version:  "PRODUCTION 1.39 2010-11-18".
 
 Device Utilization Summary:
 
-   Number of BUFGMUXs                        3 out of 8      37%
+   Number of BUFGMUXs                        1 out of 8      12%
    Number of External IOBs                 271 out of 487    55%
       Number of LOCed IOBs                 271 out of 271   100%
 
-   Number of Slices                        270 out of 13312   2%
-      Number of SLICEMs                      0 out of 6656    0%
+   Number of Slices                        738 out of 13312   5%
+      Number of SLICEMs                     63 out of 6656    1%
 
 
 
@@ -43,7 +43,6 @@ WARNING:Par:288 - The signal DIP_SW<2>_IBUF has no load.  PAR will not attempt t
 WARNING:Par:288 - The signal DIP_SW<3>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal MZB_CPLD_RESET_OUT_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal DIP_SW<4>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal FPGA_CLK1_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal DIP_SW<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal FPGA_CLK2_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal FPGA_CLK3_IBUF has no load.  PAR will not attempt to route this signal.
@@ -99,59 +98,37 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:9f217d62) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:dd8c4461) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:9f217d62) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:dd8c4461) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:9f217d62) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:dd8c4461) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-........
-WARNING:Place:1019 - A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB /
-   clock site pair. The clock component <MZB_CPLD_CLK0_IBUF_BUFG> is placed at site <BUFGMUX5>. The IO component
-   <MZB_CPLD_CLK0> is placed at site <PAD79>.  This will not allow the use of the fast path between the IO and the Clock
-   buffer. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
-   <MZB_CPLD_CLK0.PAD> allowing your design to continue. This constraint disables all clock placer rules related to the
-   specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is
-   recommended that this error condition be corrected in the design.
-WARNING:Place:1019 - A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB /
-   clock site pair. The clock component <MZB_CPLD_RS5_B_IBUF_BUFG> is placed at site <BUFGMUX4>. The IO component
-   <MZB_CPLD_RS5_B> is placed at site <PAD111>.  This will not allow the use of the fast path between the IO and the
-   Clock buffer. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
-   <MZB_CPLD_RS5_B.PAD> allowing your design to continue. This constraint disables all clock placer rules related to the
-   specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is
-   recommended that this error condition be corrected in the design.
-WARNING:Place:1019 - A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB /
-   clock site pair. The clock component <MZB_CPLD_WS5_B_IBUF_BUFG> is placed at site <BUFGMUX7>. The IO component
-   <MZB_CPLD_WS5_B> is placed at site <PAD103>.  This will not allow the use of the fast path between the IO and the
-   Clock buffer. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
-   <MZB_CPLD_WS5_B.PAD> allowing your design to continue. This constraint disables all clock placer rules related to the
-   specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is
-   recommended that this error condition be corrected in the design.
-Phase 4.2  Initial Clock and IO Placement (Checksum:144c93ed) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:f4ff6ea4) REAL time: 1 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:144c93ed) REAL time: 1 secs 
+Phase 5.36  Local Placement Optimization (Checksum:f4ff6ea4) REAL time: 1 secs 
 
 Phase 6.8  Global Placement
-.......
-............
-Phase 6.8  Global Placement (Checksum:28758af) REAL time: 1 secs 
+...................
+.................
+Phase 6.8  Global Placement (Checksum:e3004122) REAL time: 2 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:28758af) REAL time: 1 secs 
+Phase 7.5  Local Placement Optimization (Checksum:e3004122) REAL time: 2 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:fa1d8cbd) REAL time: 2 secs 
+Phase 8.18  Placement Optimization (Checksum:6de4c035) REAL time: 2 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:fa1d8cbd) REAL time: 2 secs 
+Phase 9.5  Local Placement Optimization (Checksum:6de4c035) REAL time: 2 secs 
 
 Total REAL time to Placer completion: 2 secs 
-Total CPU  time to Placer completion: 1 secs 
+Total CPU  time to Placer completion: 2 secs 
 Writing design to file ece453_top_level.ncd
 
 
@@ -159,26 +136,30 @@ Writing design to file ece453_top_level.ncd
 Starting Router
 
 
-Phase  1  : 2595 unrouted;      REAL time: 2 secs 
+Phase  1  : 5287 unrouted;      REAL time: 2 secs 
 
-Phase  2  : 2431 unrouted;      REAL time: 2 secs 
+Phase  2  : 4628 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 635 unrouted;      REAL time: 2 secs 
+Phase  3  : 958 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 635 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+Phase  4  : 958 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
 Updating file: ece453_top_level.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+WARNING:Route:455 - CLK Net:MASTER/sr_ws/out may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:MASTER/sr_rs/out may have excessive skew because 
+      0 CLK pins and 3 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 4 secs 
-Total CPU time to Router completion: 3 secs 
+Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 5 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -196,11 +177,11 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-| MZB_CPLD_WS5_B_IBUF |      BUFGMUX7| No   |    8 |  0.031     |  0.906      |
+|     FPGA_CLK1_BUFGP |      BUFGMUX7| No   |  320 |  0.371     |  1.137      |
 +---------------------+--------------+------+------+------------+-------------+
-| MZB_CPLD_RS5_B_IBUF |      BUFGMUX4| No   |    8 |  0.069     |  0.895      |
+|    MASTER/sr_ws/out |         Local|      |   10 |  0.019     |  3.537      |
 +---------------------+--------------+------+------+------------+-------------+
-|  MZB_CPLD_CLK0_IBUF |      BUFGMUX5| No   |  139 |  0.242     |  1.006      |
+|    MASTER/sr_rs/out |         Local|      |   11 |  0.020     |  3.698      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -216,19 +197,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 56 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 55 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 5 secs 
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  281 MB
+Peak Memory Usage:  288 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 61
+Number of warning messages: 59
 Number of info messages: 0
 
 Writing design to file ece453_top_level.ncd

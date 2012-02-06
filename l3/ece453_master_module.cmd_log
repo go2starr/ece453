@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/vmware-shared/sandbox/ece453/l3/src/ece453_master_module.v -lang verilog -prj lab2 -o ece453_master_module.spl -module ece453_master_module -template C:/Xilinx/12.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 ece453_master_module.spl C:/vmware-shared/sandbox/ece453/l3/ece453_master_module.sym 

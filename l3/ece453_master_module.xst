@@ -1,0 +1,5 @@
+set -tmpdir "C:/vmware-shared/sandbox/ece453/l3/xst/projnav.tmp"
+set -xsthdpdir "C:/vmware-shared/sandbox/ece453/l3/xst"
+elaborate
+-ifn ece453_master_module.prj
+-ifmt mixed

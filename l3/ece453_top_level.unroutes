@@ -1,11 +1,11 @@
 Release 12.4 - par M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Thu Feb 02 17:42:52 2012
+Mon Feb 06 16:59:40 2012
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 56 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 55 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
    AC97_BIT_CLK_IBUF
@@ -19,7 +19,6 @@ WARNING:ParHelpers:361 - There are 56 loadless signals in this design. This desi
    DIP_SW<6>_IBUF
    DIP_SW<7>_IBUF
    FLASH_NRYBY_IBUF
-   FPGA_CLK1_IBUF
    FPGA_CLK2_IBUF
    FPGA_CLK3_IBUF
    FPGA_CLK_BANK_0_IBUF
