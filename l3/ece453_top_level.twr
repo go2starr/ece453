@@ -45,69 +45,69 @@ Setup/Hold to clock FPGA_CLK1
               |Max Setup to|Max Hold to |                  | Clock  |
 Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 --------------+------------+------------+------------------+--------+
-MZB_A<0>      |    1.413(R)|   -0.320(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<1>      |    1.779(R)|   -0.611(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<2>      |    0.064(R)|    0.763(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<3>      |    0.041(R)|    0.790(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<4>      |    0.030(R)|    0.804(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<5>      |    0.777(R)|    0.198(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<6>      |    0.828(R)|    0.145(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<7>      |    0.539(R)|    0.390(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<8>      |    0.755(R)|    0.205(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<9>      |    0.588(R)|    0.336(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<10>     |    0.450(R)|    0.438(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<11>     |    0.090(R)|    0.734(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<12>     |    0.513(R)|    0.376(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<13>     |    0.167(R)|    0.658(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<14>     |    0.428(R)|    0.464(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<15>     |    0.484(R)|    0.413(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<16>     |    0.100(R)|    0.722(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<17>     |    0.450(R)|    0.451(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<18>     |    0.818(R)|    0.129(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<19>     |    1.198(R)|   -0.140(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<20>     |    0.817(R)|    0.134(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<21>     |    0.485(R)|    0.414(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<22>     |    0.819(R)|    0.143(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<23>     |    0.757(R)|    0.209(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_AS   |    2.352(R)|   -1.075(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_BE0_B|    1.776(R)|   -0.636(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_BE1_B|    0.963(R)|    0.019(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_BE2_B|    1.139(R)|   -0.124(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_BE3_B|    1.112(R)|   -0.092(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_RS5_B|    2.942(R)|   -1.544(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_WS5_B|    1.857(R)|   -0.666(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<0>      |    0.976(R)|    0.011(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<1>      |    0.035(R)|    0.798(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<2>      |    0.467(R)|    0.433(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<3>      |    0.738(R)|    0.212(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<4>      |    0.743(R)|    0.212(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<5>      |    0.631(R)|    0.283(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<6>      |    0.534(R)|    0.352(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<7>      |    1.673(R)|   -0.565(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<8>      |    0.571(R)|    0.361(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<9>      |    0.745(R)|    0.215(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<10>     |    0.431(R)|    0.473(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<11>     |    0.898(R)|    0.108(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<12>     |    0.988(R)|    0.047(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<13>     |    0.870(R)|    0.147(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<14>     |    0.805(R)|    0.150(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<15>     |    0.943(R)|    0.082(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<16>     |    1.524(R)|   -0.402(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<17>     |    1.136(R)|   -0.105(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<18>     |    1.268(R)|   -0.212(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<19>     |    1.407(R)|   -0.323(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<20>     |    1.181(R)|   -0.130(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<21>     |    1.582(R)|   -0.474(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<22>     |    0.833(R)|    0.121(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<23>     |    1.572(R)|   -0.462(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<24>     |    1.694(R)|   -0.553(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<25>     |    1.728(R)|   -0.580(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<26>     |    1.532(R)|   -0.436(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<27>     |    1.777(R)|   -0.635(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<28>     |    1.141(R)|   -0.137(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<29>     |    1.137(R)|   -0.141(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<30>     |    1.449(R)|   -0.366(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<31>     |    0.984(R)|   -0.004(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<0>      |    1.246(R)|   -0.179(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<1>      |    0.902(R)|    0.101(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<2>      |    1.729(R)|   -0.573(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<3>      |    1.272(R)|   -0.208(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<4>      |    1.327(R)|   -0.265(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<5>      |    0.369(R)|    0.534(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<6>      |    0.426(R)|    0.481(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<7>      |    0.416(R)|    0.496(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<8>      |    0.035(R)|    0.797(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<9>      |    0.795(R)|    0.172(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<10>     |    0.098(R)|    0.723(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<11>     |    0.555(R)|    0.371(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<12>     |    0.139(R)|    0.676(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<13>     |    0.103(R)|    0.718(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<14>     |    0.471(R)|    0.428(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<15>     |    0.445(R)|    0.444(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<16>     |    0.498(R)|    0.396(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<17>     |    1.190(R)|   -0.171(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<18>     |    0.508(R)|    0.375(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<19>     |    0.807(R)|    0.142(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<20>     |    0.520(R)|    0.373(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<21>     |    0.423(R)|    0.485(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<22>     |    0.426(R)|    0.467(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<23>     |    0.042(R)|    0.790(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_AS   |    2.176(R)|   -0.929(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_BE0_B|    2.118(R)|   -0.915(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_BE1_B|    1.122(R)|   -0.112(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_BE2_B|    1.870(R)|   -0.731(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_BE3_B|    2.617(R)|   -1.310(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_RS5_B|    3.053(R)|   -1.622(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_WS5_B|    2.011(R)|   -0.805(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<0>      |    3.193(R)|   -1.728(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<1>      |    0.908(R)|    0.081(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<2>      |    0.467(R)|    0.430(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<3>      |    0.108(R)|    0.728(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<4>      |    0.608(R)|    0.310(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<5>      |    0.976(R)|    0.006(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<6>      |    0.534(R)|    0.351(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<7>      |    1.532(R)|   -0.448(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<8>      |    1.076(R)|   -0.069(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<9>      |    0.915(R)|    0.079(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<10>     |    0.479(R)|    0.421(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<11>     |    0.968(R)|    0.041(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<12>     |    1.104(R)|   -0.068(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<13>     |    0.044(R)|    0.788(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<14>     |    0.053(R)|    0.777(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<15>     |    0.800(R)|    0.156(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<16>     |    1.407(R)|   -0.307(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<17>     |    0.585(R)|    0.334(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<18>     |    0.549(R)|    0.379(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<19>     |    1.256(R)|   -0.203(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<20>     |    0.876(R)|    0.114(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<21>     |    0.960(R)|    0.027(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<22>     |    0.407(R)|    0.489(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<23>     |    1.488(R)|   -0.384(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<24>     |    0.971(R)|    0.015(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<25>     |    0.523(R)|    0.371(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<26>     |    0.928(R)|    0.015(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<27>     |    1.025(R)|   -0.045(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<28>     |    1.064(R)|   -0.055(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<29>     |    0.494(R)|    0.399(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<30>     |    1.043(R)|   -0.054(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<31>     |    1.023(R)|    0.005(R)|FPGA_CLK1_BUFGP   |   0.000|
 --------------+------------+------------+------------------+--------+
 
 Clock FPGA_CLK1 to Pad
@@ -115,38 +115,38 @@ Clock FPGA_CLK1 to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-MZB_D<0>    |   10.287(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<1>    |   10.188(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<2>    |    9.992(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<3>    |    9.819(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<4>    |    9.092(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<5>    |    9.431(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<6>    |    9.338(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<7>    |    9.300(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<8>    |    9.525(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<9>    |    9.696(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<10>   |    9.381(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<11>   |    9.711(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<12>   |   10.245(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<13>   |    9.142(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<14>   |    9.585(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<15>   |   10.105(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<16>   |   10.625(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<17>   |   10.253(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<18>   |   10.629(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<19>   |   10.522(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<20>   |    9.937(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<21>   |   10.529(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<22>   |    9.984(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<23>   |   10.435(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<24>   |   11.073(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<25>   |   10.756(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<26>   |   11.362(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<27>   |   10.769(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<28>   |   10.496(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<29>   |   10.699(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<30>   |   10.685(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<31>   |   11.188(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<0>    |   10.323(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<1>    |    9.972(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<2>    |    9.653(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<3>    |    9.970(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<4>    |   10.053(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<5>    |    9.557(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<6>    |    9.636(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<7>    |   10.476(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<8>    |   10.042(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<9>    |    9.610(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<10>   |    9.740(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<11>   |   10.003(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<12>   |    9.755(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<13>   |    9.639(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<14>   |   10.051(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<15>   |   10.039(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<16>   |   10.401(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<17>   |   10.315(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<18>   |   10.346(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<19>   |   10.160(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<20>   |   10.044(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<21>   |    9.415(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<22>   |   10.179(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<23>   |   10.072(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<24>   |   10.122(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<25>   |    9.379(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<26>   |    9.566(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<27>   |   10.315(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<28>   |    9.760(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<29>   |    9.603(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<30>   |   10.405(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<31>   |   10.251(R)|FPGA_CLK1_BUFGP   |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock FPGA_CLK1
@@ -154,7 +154,7 @@ Clock to Setup on destination clock FPGA_CLK1
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-FPGA_CLK1      |   15.060|         |         |         |
+FPGA_CLK1      |   21.173|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -163,93 +163,93 @@ Source Pad     |Destination Pad |  Delay  |
 ---------------+----------------+---------+
 MZB_A<0>       |ACC_PORT_PIN<17>|    9.684|
 MZB_A<1>       |ACC_PORT_PIN<18>|   10.688|
-MZB_A<2>       |ACC_PORT_PIN<19>|   10.921|
-MZB_CPLD_AS    |MZB_D<0>        |    9.489|
-MZB_CPLD_AS    |MZB_D<1>        |    9.818|
-MZB_CPLD_AS    |MZB_D<2>        |   10.210|
-MZB_CPLD_AS    |MZB_D<3>        |   10.539|
-MZB_CPLD_AS    |MZB_D<4>        |   10.940|
-MZB_CPLD_AS    |MZB_D<5>        |   10.902|
-MZB_CPLD_AS    |MZB_D<6>        |   11.307|
-MZB_CPLD_AS    |MZB_D<7>        |   12.067|
-MZB_CPLD_AS    |MZB_D<8>        |   12.376|
-MZB_CPLD_AS    |MZB_D<9>        |   12.438|
-MZB_CPLD_AS    |MZB_D<10>       |   13.088|
-MZB_CPLD_AS    |MZB_D<11>       |   12.439|
-MZB_CPLD_AS    |MZB_D<12>       |   12.817|
-MZB_CPLD_AS    |MZB_D<13>       |   12.818|
-MZB_CPLD_AS    |MZB_D<14>       |   13.187|
-MZB_CPLD_AS    |MZB_D<15>       |   13.537|
-MZB_CPLD_AS    |MZB_D<16>       |    9.095|
-MZB_CPLD_AS    |MZB_D<17>       |    9.113|
-MZB_CPLD_AS    |MZB_D<18>       |    9.095|
-MZB_CPLD_AS    |MZB_D<19>       |    9.849|
-MZB_CPLD_AS    |MZB_D<20>       |    9.489|
-MZB_CPLD_AS    |MZB_D<21>       |   10.540|
-MZB_CPLD_AS    |MZB_D<22>       |   10.570|
-MZB_CPLD_AS    |MZB_D<23>       |   10.941|
-MZB_CPLD_AS    |MZB_D<24>       |   11.262|
-MZB_CPLD_AS    |MZB_D<25>       |   11.603|
-MZB_CPLD_AS    |MZB_D<26>       |   11.684|
-MZB_CPLD_AS    |MZB_D<27>       |   11.699|
-MZB_CPLD_AS    |MZB_D<28>       |   12.068|
-MZB_CPLD_AS    |MZB_D<29>       |   12.816|
-MZB_CPLD_AS    |MZB_D<30>       |   13.429|
-MZB_CPLD_AS    |MZB_D<31>       |   13.186|
-MZB_CPLD_BE0_B |ACC_PORT_PIN<12>|   13.915|
-MZB_CPLD_BE1_B |ACC_PORT_PIN<13>|   12.406|
-MZB_CPLD_BE2_B |ACC_PORT_PIN<14>|   14.790|
-MZB_CPLD_BE3_B |ACC_PORT_PIN<15>|   14.475|
+MZB_A<2>       |ACC_PORT_PIN<19>|   10.915|
+MZB_CPLD_AS    |MZB_D<0>        |   10.140|
+MZB_CPLD_AS    |MZB_D<1>        |   10.301|
+MZB_CPLD_AS    |MZB_D<2>        |   10.870|
+MZB_CPLD_AS    |MZB_D<3>        |   11.021|
+MZB_CPLD_AS    |MZB_D<4>        |   11.232|
+MZB_CPLD_AS    |MZB_D<5>        |   11.384|
+MZB_CPLD_AS    |MZB_D<6>        |   11.968|
+MZB_CPLD_AS    |MZB_D<7>        |   12.351|
+MZB_CPLD_AS    |MZB_D<8>        |   13.058|
+MZB_CPLD_AS    |MZB_D<9>        |   13.086|
+MZB_CPLD_AS    |MZB_D<10>       |   13.420|
+MZB_CPLD_AS    |MZB_D<11>       |   13.823|
+MZB_CPLD_AS    |MZB_D<12>       |   13.456|
+MZB_CPLD_AS    |MZB_D<13>       |   14.165|
+MZB_CPLD_AS    |MZB_D<14>       |   13.807|
+MZB_CPLD_AS    |MZB_D<15>       |   13.807|
+MZB_CPLD_AS    |MZB_D<16>       |   10.137|
+MZB_CPLD_AS    |MZB_D<17>       |   10.281|
+MZB_CPLD_AS    |MZB_D<18>       |   10.137|
+MZB_CPLD_AS    |MZB_D<19>       |   10.500|
+MZB_CPLD_AS    |MZB_D<20>       |   10.631|
+MZB_CPLD_AS    |MZB_D<21>       |   11.023|
+MZB_CPLD_AS    |MZB_D<22>       |   10.871|
+MZB_CPLD_AS    |MZB_D<23>       |   11.592|
+MZB_CPLD_AS    |MZB_D<24>       |   11.744|
+MZB_CPLD_AS    |MZB_D<25>       |   12.095|
+MZB_CPLD_AS    |MZB_D<26>       |   11.969|
+MZB_CPLD_AS    |MZB_D<27>       |   13.385|
+MZB_CPLD_AS    |MZB_D<28>       |   12.711|
+MZB_CPLD_AS    |MZB_D<29>       |   13.087|
+MZB_CPLD_AS    |MZB_D<30>       |   13.761|
+MZB_CPLD_AS    |MZB_D<31>       |   13.457|
+MZB_CPLD_BE0_B |ACC_PORT_PIN<12>|   13.919|
+MZB_CPLD_BE1_B |ACC_PORT_PIN<13>|   12.416|
+MZB_CPLD_BE2_B |ACC_PORT_PIN<14>|   14.787|
+MZB_CPLD_BE3_B |ACC_PORT_PIN<15>|   13.530|
 MZB_CPLD_CLK0  |ACC_PORT_PIN<9> |    9.934|
-MZB_CPLD_RS5_B |ACC_PORT_PIN<10>|    9.330|
-MZB_CPLD_RS5_B |MZB_D<0>        |   10.518|
-MZB_CPLD_RS5_B |MZB_D<1>        |   10.847|
-MZB_CPLD_RS5_B |MZB_D<2>        |   11.239|
-MZB_CPLD_RS5_B |MZB_D<3>        |   11.568|
-MZB_CPLD_RS5_B |MZB_D<4>        |   11.969|
-MZB_CPLD_RS5_B |MZB_D<5>        |   11.931|
-MZB_CPLD_RS5_B |MZB_D<6>        |   12.336|
-MZB_CPLD_RS5_B |MZB_D<7>        |   13.096|
-MZB_CPLD_RS5_B |MZB_D<8>        |   13.405|
-MZB_CPLD_RS5_B |MZB_D<9>        |   13.467|
-MZB_CPLD_RS5_B |MZB_D<10>       |   14.117|
-MZB_CPLD_RS5_B |MZB_D<11>       |   13.468|
-MZB_CPLD_RS5_B |MZB_D<12>       |   13.846|
-MZB_CPLD_RS5_B |MZB_D<13>       |   13.847|
-MZB_CPLD_RS5_B |MZB_D<14>       |   14.216|
-MZB_CPLD_RS5_B |MZB_D<15>       |   14.566|
-MZB_CPLD_RS5_B |MZB_D<16>       |   10.124|
-MZB_CPLD_RS5_B |MZB_D<17>       |   10.142|
-MZB_CPLD_RS5_B |MZB_D<18>       |   10.124|
-MZB_CPLD_RS5_B |MZB_D<19>       |   10.878|
-MZB_CPLD_RS5_B |MZB_D<20>       |   10.518|
-MZB_CPLD_RS5_B |MZB_D<21>       |   11.569|
-MZB_CPLD_RS5_B |MZB_D<22>       |   11.599|
-MZB_CPLD_RS5_B |MZB_D<23>       |   11.970|
-MZB_CPLD_RS5_B |MZB_D<24>       |   12.291|
-MZB_CPLD_RS5_B |MZB_D<25>       |   12.632|
-MZB_CPLD_RS5_B |MZB_D<26>       |   12.713|
-MZB_CPLD_RS5_B |MZB_D<27>       |   12.728|
-MZB_CPLD_RS5_B |MZB_D<28>       |   13.097|
-MZB_CPLD_RS5_B |MZB_D<29>       |   13.845|
-MZB_CPLD_RS5_B |MZB_D<30>       |   14.458|
-MZB_CPLD_RS5_B |MZB_D<31>       |   14.215|
+MZB_CPLD_RS5_B |ACC_PORT_PIN<10>|    9.334|
+MZB_CPLD_RS5_B |MZB_D<0>        |   10.668|
+MZB_CPLD_RS5_B |MZB_D<1>        |   10.829|
+MZB_CPLD_RS5_B |MZB_D<2>        |   11.398|
+MZB_CPLD_RS5_B |MZB_D<3>        |   11.549|
+MZB_CPLD_RS5_B |MZB_D<4>        |   11.760|
+MZB_CPLD_RS5_B |MZB_D<5>        |   11.912|
+MZB_CPLD_RS5_B |MZB_D<6>        |   12.496|
+MZB_CPLD_RS5_B |MZB_D<7>        |   12.879|
+MZB_CPLD_RS5_B |MZB_D<8>        |   13.586|
+MZB_CPLD_RS5_B |MZB_D<9>        |   13.614|
+MZB_CPLD_RS5_B |MZB_D<10>       |   13.948|
+MZB_CPLD_RS5_B |MZB_D<11>       |   14.351|
+MZB_CPLD_RS5_B |MZB_D<12>       |   13.984|
+MZB_CPLD_RS5_B |MZB_D<13>       |   14.693|
+MZB_CPLD_RS5_B |MZB_D<14>       |   14.335|
+MZB_CPLD_RS5_B |MZB_D<15>       |   14.335|
+MZB_CPLD_RS5_B |MZB_D<16>       |   10.665|
+MZB_CPLD_RS5_B |MZB_D<17>       |   10.809|
+MZB_CPLD_RS5_B |MZB_D<18>       |   10.665|
+MZB_CPLD_RS5_B |MZB_D<19>       |   11.028|
+MZB_CPLD_RS5_B |MZB_D<20>       |   11.159|
+MZB_CPLD_RS5_B |MZB_D<21>       |   11.551|
+MZB_CPLD_RS5_B |MZB_D<22>       |   11.399|
+MZB_CPLD_RS5_B |MZB_D<23>       |   12.120|
+MZB_CPLD_RS5_B |MZB_D<24>       |   12.272|
+MZB_CPLD_RS5_B |MZB_D<25>       |   12.623|
+MZB_CPLD_RS5_B |MZB_D<26>       |   12.497|
+MZB_CPLD_RS5_B |MZB_D<27>       |   13.913|
+MZB_CPLD_RS5_B |MZB_D<28>       |   13.239|
+MZB_CPLD_RS5_B |MZB_D<29>       |   13.615|
+MZB_CPLD_RS5_B |MZB_D<30>       |   14.289|
+MZB_CPLD_RS5_B |MZB_D<31>       |   13.985|
 MZB_CPLD_WS5_B |ACC_PORT_PIN<11>|    9.783|
-MZB_D<0>       |ACC_PORT_PIN<20>|   12.121|
+MZB_D<0>       |ACC_PORT_PIN<20>|   12.131|
 MZB_D<8>       |ACC_PORT_PIN<21>|   10.679|
 MZB_D<16>      |ACC_PORT_PIN<22>|    9.847|
-MZB_D<24>      |ACC_PORT_PIN<23>|   10.508|
+MZB_D<24>      |ACC_PORT_PIN<23>|   10.504|
 ---------------+----------------+---------+
 
 
-Analysis completed Mon Feb 06 16:59:43 2012 
+Analysis completed Wed Feb 08 15:48:32 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 179 MB
+Peak Memory Usage: 177 MB
 
 
 

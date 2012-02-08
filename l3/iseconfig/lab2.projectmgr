@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ece453_top_level (C:/Users/CCS/Documents/lab2/src/ece453_top_level.v)</SelectedItem>
+         <SelectedItem>ece453_top_level (C:/vmware-shared/sandbox/ece453/l3/src/ece453_top_level.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e7000000020000000000000000000000000000000064ffffffff000000810000000000000002000000e70000000100000000000000000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>ece453_top_level (C:/Users/CCS/Documents/lab2/src/ece453_top_level.v)</CurrentItem>
+      <CurrentItem>ece453_top_level (C:/vmware-shared/sandbox/ece453/l3/src/ece453_top_level.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -62,17 +62,16 @@
          <ClosedNode>Implement Design/Map</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
          <ClosedNode>Implement Design/Translate</ClosedNode>
-         <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Configure Target Device</SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012d0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000011c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000011c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Configure Target Device</CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>

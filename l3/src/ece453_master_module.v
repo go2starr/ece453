@@ -141,18 +141,16 @@ module ece453_master_module(
    // CPLD
    shift_reg sr_rs  (.in(CPLD_RS5_B), .out(CPLD_RS5_B_clkd), .clk(FPGA_CLK1));
    shift_reg sr_ws  (.in(CPLD_WS5_B), .out(CPLD_WS5_B_clkd), .clk(FPGA_CLK1));
-   shift_reg sr_as  (.in(CPLD_AS), .out(CPLD_AS_clkd), .clk(FPGA_CLK1));   
+   shift_reg sr_as  (.in(CPLD_AS),    .out(CPLD_AS_clkd),    .clk(FPGA_CLK1));   
 
    // Data INOUT
    wire [31:0] FPGA_DOUT;
-   assign ARM_D = (~CPLD_RS5_B && CPLD_AS) ? FPGA_DOUT : 32'bz;
+   assign ARM_D = (~CPLD_RS5_B_clkd && CPLD_AS_clkd) ? FPGA_DOUT : 32'bz;
    
    reg_file myRegFile (.addr(ARM_A_clkd), .din(ARM_D_clkd), .dout(FPGA_DOUT), .ws_n(CPLD_WS5_B_clkd),
 		       .rs_n(CPLD_RS5_B_clkd), .be(ARM_BE_B_clkd), .clk(FPGA_CLK1),
 		       .as(CPLD_AS_clkd), .rst(SYS_RST_N));
    
-   //	assign ACC_PORT_PIN[9] = FPGA_CLK1;
-   //	assign ACC_PORT_PIN[10] = SYS_RST_N;
    
 
 endmodule
