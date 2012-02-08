@@ -138,8 +138,9 @@ module ece453_master_module(
    endgenerate
 
    // CPLD
-   shift_reg sr_rs  (.in(CPLD_RS5_B), .out(CPLD_RS5_B_clkd), .clk(FPGA_CLK1));
-   shift_reg sr_ws  (.in(CPLD_WS5_B), .out(CPLD_WS5_B_clkd), .clk(FPGA_CLK1));
+   shift_reg #(.size(3)) sr_rs  (.in(CPLD_RS5_B), .out(CPLD_RS5_B_clkd), .clk(FPGA_CLK1));
+   shift_reg #(.size(3)) sr_ws  (.in(CPLD_WS5_B), .out(CPLD_WS5_B_clkd), .clk(FPGA_CLK1));
+   
    shift_reg sr_as  (.in(CPLD_AS),    .out(CPLD_AS_clkd),    .clk(FPGA_CLK1));   
 
    // Data INOUT

@@ -6,6 +6,7 @@ module reg_file(addr,
                 be,
                 clk,
                 as,
+                port,
 		rst);
 
    // Inputs/Outputs
@@ -16,6 +17,14 @@ module reg_file(addr,
    input [3:0]       be;
    input             rst;
 
+
+   // Read/Write state
+   reg               rw_cycle;
+
+   // I/O Port direction control (1 output, 0 input)
+   reg [15:0]        io_dir;
+
+   
    
    // Address decoding
    reg [3:0]         select;
@@ -55,6 +64,7 @@ module reg_file(addr,
       if (~rst)
 	begin
 	   dout <= 32'h0;
+           rw_cycle <= 1'b0;
 	end
       
       else if (as) 
@@ -62,25 +72,36 @@ module reg_file(addr,
 	   // Read
 	   if (~rs_n) 
 	     begin
-                case (select)
-                  A_RW_COUNT:
-		    dout <= { write_count, read_count };
-                  A_SCRATCH1:
-		    dout <= RF[select];
-                  A_SCRATCH2:
-		    dout <= RF[select];
-                  A_SCRATCH3:
-		    dout <= RF[select];
-                  A_SCRATCH4:
-		    dout <= RF[select];
-                  A_IO_DIR:
-                    dout <= RF[select];
-                  A_READ:
+                if (select == A_RW_COUNT) begin
+		   dout <= { write_count, read_count }; 
+                end
+                
+                else if  (select == A_SCRATCH1 ||
+                          select == A_SCRATCH2 ||
+                          select == A_SCRATCH3 ||
+                          select == A_SCRATCH4) begin
+                   
+                   // Update counter on entry
+                   if (~rw_cycle) begin
+                      rw_cycle <= 1'b1;
+                      read_count = read_count +1;
+                   end
+
+		   dout <= RF[select];
+                end // if (select == A_SCRATCH1 ||...
+
+                else if (select == A_READ) begin
                     dout <= 1+1;        // TODO
-                  A_WRITE:
+                end
+
+                else if (select == A_WRITE) begin
                     dout <= 1+1;        // TODO
-                endcase
-	     end
+                end
+
+                else begin
+                   dout <= 32'hdeadbeef;
+                end
+             end // if (~rs_n)
            
 
 	   // Write
@@ -96,6 +117,13 @@ module reg_file(addr,
                          select == A_SCRATCH2 ||
                          select == A_SCRATCH3 ||
                          select == A_SCRATCH4) begin
+
+                   // Update counter on entry
+                   if (~rw_cycle) begin
+                      rw_cycle <= 1'b1;
+                      write_count = write_count + 1;
+                   end                
+
 		   case (be)
 		     4'd0: RF[select] <= din;
 		     4'd3: RF[select] <= {RF[select][31:16], din[15:0]};
@@ -116,31 +144,9 @@ module reg_file(addr,
                 end
 	     end // if (~ws_n)
 	end // if (as)
+      else begin
+         rw_cycle <= 1'b0;
+      end // else: !if(as)
    end // always @ (posedge clk or negedge rst)
-   
-   
-   // Read count
-   always @(negedge rs_n, negedge rst) begin
-      if (~rst) begin
-	 read_count = 0;
-      end
-      // if write/read to scratch
-      else if (as && select > 0 && select < 5 && ws_n && be[3]) begin
-	 read_count = read_count + 1;
-      end		
-   end			
-   
-   
-   // Write count
-   always @(posedge ws_n, negedge rst) begin
-      if (~rst) begin
-	 write_count = 0;
-      end	
-      // if write/read to scratch
-      else if (as && select > 0 && select < 5 && ~be[3] && rs_n) begin
-	 write_count = write_count + 1;
-      end				
-   end
-
 
 endmodule // reg_file

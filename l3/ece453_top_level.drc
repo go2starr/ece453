@@ -1,7 +1,7 @@
 Release 12.4 Drc M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Wed Feb 08 16:29:27 2012
+Wed Feb 08 17:22:25 2012
 
 drc -z ece453_top_level.ncd ece453_top_level.pcf
 
