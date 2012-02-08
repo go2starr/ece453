@@ -4,13 +4,13 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: ece453_top_level.prj
 
@@ -159,7 +159,7 @@ Analyzing module <reg_file> in library <work>.
 	A_SCRATCH3 = 4'b0011
 	A_SCRATCH4 = 4'b0100
 	A_WRITE = 4'b0110
-WARNING:Xst:905 - "src/reg_file.v" line 34: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "src/reg_file.v" line 33: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <addr>
 Module <reg_file> is correct for synthesis.
  
@@ -173,7 +173,7 @@ Performing bidirectional port resolution...
 Synthesizing Unit <shift_reg>.
     Related source file is "src/shift_reg.v".
     Found 1-bit register for signal <out>.
-    Found 1-bit xor2 for signal <out$xor0000> created at line 13.
+    Found 1-bit xor2 for signal <out$xor0000> created at line 12.
     Found 3-bit register for signal <shift_reg>.
     Summary:
 	inferred   4 D-type flip-flop(s).
@@ -642,8 +642,8 @@ Speed Grade: -4
 
    Minimum period: 14.028ns (Maximum Frequency: 71.288MHz)
    Minimum input arrival time before clock: 7.596ns
-   Maximum output required time after clock: 7.241ns
-   Maximum combinational path delay: 10.328ns
+   Maximum output required time after clock: 10.267ns
+   Maximum combinational path delay: 7.342ns
 
 Timing Detail:
 --------------
@@ -777,51 +777,51 @@ Offset:              7.596ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FPGA_CLK1'
-  Total number of paths / destination ports: 32 / 32
+  Total number of paths / destination ports: 96 / 32
 -------------------------------------------------------------------------
-Offset:              7.241ns (Levels of Logic = 1)
-  Source:            MASTER/myRegFile/dout_31 (FF)
+Offset:              10.267ns (Levels of Logic = 2)
+  Source:            MASTER/sr_as/out (FF)
   Destination:       MZB_D<31> (PAD)
   Source Clock:      FPGA_CLK1 rising
 
-  Data Path: MASTER/myRegFile/dout_31 to MZB_D<31>
+  Data Path: MASTER/sr_as/out to MZB_D<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             2   0.720   0.877  MASTER/myRegFile/dout_31 (MASTER/myRegFile/dout_31)
-     IOBUF:I->IO               5.644          MZB_D_31_IOBUF (MZB_D<31>)
-    ----------------------------------------
-    Total                      7.241ns (6.364ns logic, 0.877ns route)
-                                       (87.9% logic, 12.1% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 78 / 46
--------------------------------------------------------------------------
-Delay:               10.328ns (Levels of Logic = 3)
-  Source:            MZB_CPLD_AS (PAD)
-  Destination:       MZB_D<31> (PAD)
-
-  Data Path: MZB_CPLD_AS to MZB_D<31>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.821   1.216  MZB_CPLD_AS_IBUF (MZB_CPLD_AS_IBUF)
+     FDE:C->Q              4   0.720   1.256  MASTER/sr_as/out (MASTER/sr_as/out)
      LUT2:I0->O           32   0.551   1.853  MASTER/ARM_D_and0000_inv1 (MASTER/ARM_D_and0000_inv)
      IOBUF:T->IO               5.887          MZB_D_31_IOBUF (MZB_D<31>)
     ----------------------------------------
-    Total                     10.328ns (7.259ns logic, 3.069ns route)
-                                       (70.3% logic, 29.7% route)
+    Total                     10.267ns (7.158ns logic, 3.109ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Delay:               7.342ns (Levels of Logic = 2)
+  Source:            MZB_D<24> (PAD)
+  Destination:       ACC_PORT_PIN<23> (PAD)
+
+  Data Path: MZB_D<24> to ACC_PORT_PIN<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   0.821   0.877  MZB_D_24_IOBUF (ACC_PORT_PIN_23_OBUF)
+     OBUF:I->O                 5.644          ACC_PORT_PIN_23_OBUF (ACC_PORT_PIN<23>)
+    ----------------------------------------
+    Total                      7.342ns (6.465ns logic, 0.877ns route)
+                                       (88.1% logic, 11.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.35 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.37 secs
  
 --> 
 
-Total memory usage is 262928 kilobytes
+Total memory usage is 262352 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  140 (   0 filtered)

@@ -107,7 +107,6 @@ module ece453_master_module(
    
    assign ARM_DTACK = 1'b1;
    
-
    wire [23:0]                            ARM_A_clkd;
    wire [3:0]                             ARM_BE_B_clkd;
    wire [31:0]                            ARM_D_clkd;

@@ -15,7 +15,6 @@ module reg_file(addr,
    input             ws_n, rs_n, clk, as;
    input [3:0]       be;
    input             rst;
-   
 
    
    // Address decoding
@@ -82,6 +81,7 @@ module reg_file(addr,
                     dout <= 1+1;        // TODO
                 endcase
 	     end
+           
 
 	   // Write
 	   else if (~ws_n) 
