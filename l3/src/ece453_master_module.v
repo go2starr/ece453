@@ -95,15 +95,6 @@ module ece453_master_module(
    // place all use code below here *********************************************
    // the code below is only example code - edit as needed **********************
    
-   assign ACC_PORT_PIN[9] = ARM_CLK0;
-   assign ACC_PORT_PIN[10] = CPLD_RS5_B;
-   assign ACC_PORT_PIN[11] = CPLD_WS5_B;
-   assign ACC_PORT_PIN[15:12] = ARM_BE_B[3:0];
-   assign ACC_PORT_PIN[19:17] = ARM_A[2:0];
-   assign ACC_PORT_PIN[20] = ARM_D[0];
-   assign ACC_PORT_PIN[21] = ARM_D[8];
-   assign ACC_PORT_PIN[22] = ARM_D[16];
-   assign ACC_PORT_PIN[23] = ARM_D[24];
    
    assign ARM_DTACK = 1'b1;
    
@@ -138,9 +129,9 @@ module ece453_master_module(
    endgenerate
 
    // CPLD
-   shift_reg #(.DELAY(0)) sr_rs  (.in(CPLD_RS5_B), .out(CPLD_RS5_B_clkd), .clk(FPGA_CLK1));
-   shift_reg #(.DELAY(0)) sr_ws  (.in(CPLD_WS5_B), .out(CPLD_WS5_B_clkd), .clk(FPGA_CLK1));
-   shift_reg #(.DELAY(0)) sr_as   (.in(CPLD_AS),    .out(CPLD_AS_clkd),    .clk(FPGA_CLK1));   
+   shift_reg #(.DELAY(1)) sr_rs  (.in(CPLD_RS5_B), .out(CPLD_RS5_B_clkd), .clk(FPGA_CLK1));
+   shift_reg #(.DELAY(1)) sr_ws  (.in(CPLD_WS5_B), .out(CPLD_WS5_B_clkd), .clk(FPGA_CLK1));
+   shift_reg #(.DELAY(1)) sr_as   (.in(CPLD_AS),    .out(CPLD_AS_clkd),    .clk(FPGA_CLK1));   
 
    // Data INOUT
    wire [31:0] FPGA_DOUT;

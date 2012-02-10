@@ -6,7 +6,7 @@ module reg_file(addr,
                 be,
                 clk,
                 as,
-                //port,
+                port,
 		rst);
 
    // Inputs/Outputs
@@ -16,6 +16,7 @@ module reg_file(addr,
    input             ws_n, rs_n, clk, as;
    input [3:0]       be;
    input             rst;
+   inout [15:0]      port;
 
 
    // Read/Write state
@@ -23,8 +24,6 @@ module reg_file(addr,
 
    // I/O Port direction control (1 output, 0 input)
    reg [15:0]        io_dir;
-
-   
    
    // Address decoding
    reg [3:0]         select;
@@ -90,14 +89,18 @@ module reg_file(addr,
 		   dout <= RF[select];
                 end // if (select == A_SCRATCH1 ||...
 
+                else if (select == A_IO_DIR) begin
+                   dout <= io_dir;
+                end
+
                 else if (select == A_READ) begin
-                    dout <= 1+1;        // TODO
+                   dout <= port & ~io_dir;
                 end
-
+                
                 else if (select == A_WRITE) begin
-                    dout <= 1+1;        // TODO
+                   dout <= port; // Don't care
                 end
-
+                
                 else begin
                    dout <= 32'hdeadbeef;
                 end
@@ -132,15 +135,15 @@ module reg_file(addr,
 		end
 
                 else if (select == A_IO_DIR) begin
-                   // TODO
+                   io_dir <= din;
                 end
 
                 else if (select == A_WRITE) begin
-                   // TODO
+                   port <= din & io_dir;
                 end
 
                 else if (select == A_READ) begin
-                   // TODO
+                   // Read only
                 end
 	     end // if (~ws_n)
 	end // if (as)
