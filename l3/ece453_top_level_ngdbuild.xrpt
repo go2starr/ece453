@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Wed Feb 08 17:22:06 2012">
+  <application stringID="NgdBuild" timeStamp="Thu Feb 09 17:56:40 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -83,19 +83,19 @@
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IOBUF" value="32"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="30"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="165"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="163"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT2_D" value="6"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="25"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="24"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3_D" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3_L" value="93"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="470"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="474"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT4_D" value="33"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4_L" value="32"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4_L" value="31"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="36"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_MUXF5" value="105"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF5" value="106"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="148"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUFT" value="93"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_SRL16" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRL16" value="63"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="32"/>
       </section>
@@ -109,20 +109,20 @@
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="30"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="165"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="163"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT2_D" value="6"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="25"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="24"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3_D" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3_L" value="93"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="470"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="474"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT4_D" value="33"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4_L" value="32"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4_L" value="31"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="36"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_MUXF5" value="105"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF5" value="106"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="148"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUFT" value="125"/>
         <item dataType="int" stringID="NGDBUILD_NUM_PULLUP" value="4"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="63"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="32"/>
       </section>

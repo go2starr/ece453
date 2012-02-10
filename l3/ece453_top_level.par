@@ -1,7 +1,7 @@
 Release 12.4 par M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-ECELABS-54-HP::  Wed Feb 08 17:22:12 2012
+ECELABS-54-HP::  Thu Feb 09 17:56:46 2012
 
 par -filter iseconfig/filter.filter -w -intstyle ise -ol high -t 1
 ece453_top_level_map.ncd ece453_top_level.ncd ece453_top_level.pcf 
@@ -25,7 +25,7 @@ Device Utilization Summary:
       Number of LOCed IOBs                 271 out of 271   100%
 
    Number of Slices                        613 out of 13312   4%
-      Number of SLICEMs                      2 out of 6656    1%
+      Number of SLICEMs                     63 out of 6656    1%
 
 
 
@@ -98,34 +98,34 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:8bb60c40) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:bb98d44b) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:8bb60c40) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:bb98d44b) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:8bb60c40) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:bb98d44b) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:845de4b9) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:75de1107) REAL time: 1 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:845de4b9) REAL time: 1 secs 
+Phase 5.36  Local Placement Optimization (Checksum:75de1107) REAL time: 1 secs 
 
 Phase 6.8  Global Placement
-.......
-......
-Phase 6.8  Global Placement (Checksum:717e6219) REAL time: 2 secs 
+........
+..................
+Phase 6.8  Global Placement (Checksum:97f05868) REAL time: 2 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:717e6219) REAL time: 2 secs 
+Phase 7.5  Local Placement Optimization (Checksum:97f05868) REAL time: 2 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:9d4e9692) REAL time: 2 secs 
+Phase 8.18  Placement Optimization (Checksum:1c1bb66) REAL time: 2 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:9d4e9692) REAL time: 2 secs 
+Phase 9.5  Local Placement Optimization (Checksum:1c1bb66) REAL time: 2 secs 
 
 Total REAL time to Placer completion: 2 secs 
 Total CPU  time to Placer completion: 1 secs 
@@ -136,13 +136,13 @@ Writing design to file ece453_top_level.ncd
 Starting Router
 
 
-Phase  1  : 4022 unrouted;      REAL time: 2 secs 
+Phase  1  : 4328 unrouted;      REAL time: 2 secs 
 
-Phase  2  : 3680 unrouted;      REAL time: 2 secs 
+Phase  2  : 3683 unrouted;      REAL time: 2 secs 
 
-Phase  3  : 816 unrouted;      REAL time: 2 secs 
+Phase  3  : 823 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 816 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+Phase  4  : 823 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
 Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
@@ -173,7 +173,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|     FPGA_CLK1_BUFGP |      BUFGMUX7| No   |  324 |  0.349     |  1.106      |
+|     FPGA_CLK1_BUFGP |      BUFGMUX7| No   |  322 |  0.310     |  1.067      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -194,7 +194,7 @@ WARNING:Par:283 - There are 55 loadless signals in this design. This design will
 Total REAL time to PAR completion: 6 secs 
 Total CPU time to PAR completion: 6 secs 
 
-Peak Memory Usage:  285 MB
+Peak Memory Usage:  284 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

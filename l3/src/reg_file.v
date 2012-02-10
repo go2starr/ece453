@@ -6,7 +6,7 @@ module reg_file(addr,
                 be,
                 clk,
                 as,
-                port,
+                //port,
 		rst);
 
    // Inputs/Outputs
@@ -70,7 +70,7 @@ module reg_file(addr,
       else if (as) 
 	begin 
 	   // Read
-	   if (~rs_n) 
+	   if (~rs_n && ws_n && be[3]) 
 	     begin
                 if (select == A_RW_COUNT) begin
 		   dout <= { write_count, read_count }; 
@@ -105,7 +105,7 @@ module reg_file(addr,
            
 
 	   // Write
-	   else if (~ws_n) 
+	   else if (~ws_n && ~be[3] && rs_n) 
 	     begin
 
                 // RW_COUNT is read only
