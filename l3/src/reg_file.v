@@ -16,7 +16,7 @@ module reg_file(addr,
    input             ws_n, rs_n, clk, as;
    input [3:0]       be;
    input             rst;
-   inout [15:0]      port;
+   output reg [15:0]      port;
 
 
    // Read/Write state

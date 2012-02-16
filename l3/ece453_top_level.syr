@@ -150,7 +150,6 @@ Analyzing top module <ece453_top_level>.
 Module <ece453_top_level> is correct for synthesis.
  
 Analyzing module <ece453_master_module> in library <work>.
-WARNING:Xst:852 - "src/ece453_master_module.v" line 149: Unconnected input port 'port' of instance 'myRegFile' is tied to GND.
 Module <ece453_master_module> is correct for synthesis.
  
 Analyzing module <shift_reg.1> in library <work>.
@@ -198,7 +197,7 @@ Unit <shift_reg_1> synthesized.
 
 Synthesizing Unit <reg_file>.
     Related source file is "src/reg_file.v".
-WARNING:Xst:647 - Input <port> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <port>.
     Found 32-bit register for signal <dout>.
     Found 16-bit register for signal <io_dir>.
     Found 16-bit up counter for signal <read_count>.
@@ -207,7 +206,7 @@ WARNING:Xst:647 - Input <port> is never used. This port will be preserved and le
     Found 16-bit up counter for signal <write_count>.
     Summary:
 	inferred   2 Counter(s).
-	inferred 241 D-type flip-flop(s).
+	inferred 257 D-type flip-flop(s).
 	inferred  32 Multiplexer(s).
 Unit <reg_file> synthesized.
 
@@ -233,8 +232,7 @@ WARNING:Xst:2563 - Inout <PIO<63>> is never assigned. Tied to value Z.
 WARNING:Xst:1305 - Output <VD_NRESET> is never assigned. Tied to value 0.
 WARNING:Xst:2563 - Inout <PIO<64>> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <PIO<59>> is never assigned. Tied to value Z.
-WARNING:Xst:1305 - Output <ACC_PORT_PIN<42:24>> is never assigned. Tied to value 0000000000000000000.
-WARNING:Xst:1305 - Output <ACC_PORT_PIN<16>> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <ACC_PORT_PIN> is never assigned. Tied to value 0000000000000000000000000000000000.
 WARNING:Xst:647 - Input <CPLD_RS1_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <PIO_DIR0> is never assigned. Tied to value 0.
 WARNING:Xst:2563 - Inout <PIO<65>> is never assigned. Tied to value Z.
@@ -360,6 +358,7 @@ WARNING:Xst:2563 - Inout <PS2_KEYB_CLK> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <I2C_SCL> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <PIO<61>> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <PIO<56>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_CLK0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <SYS_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <VE_TTX> is never assigned. Tied to value 0.
 WARNING:Xst:2563 - Inout <PIO<62>> is never assigned. Tied to value Z.
@@ -431,9 +430,9 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  16-bit up counter                                     : 2
-# Registers                                            : 264
+# Registers                                            : 265
  1-bit register                                        : 256
- 16-bit register                                       : 1
+ 16-bit register                                       : 2
  32-bit register                                       : 7
 # Multiplexers                                         : 1
  32-bit 6-to-1 multiplexer                             : 1
@@ -456,8 +455,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  16-bit up counter                                     : 2
-# Registers                                            : 496
- Flip-Flops                                            : 496
+# Registers                                            : 512
+ Flip-Flops                                            : 512
 # Multiplexers                                         : 32
  1-bit 6-to-1 multiplexer                              : 32
 # Xors                                                 : 63
@@ -472,18 +471,11 @@ Macro Statistics
 Optimizing unit <ece453_top_level> ...
 
 Optimizing unit <reg_file> ...
+WARNING:Xst:2677 - Node <RF_5_4> of sequential type is unconnected in block <reg_file>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ece453_top_level, actual ratio is 3.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_7> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_6> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_5> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_4> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_3> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myRegFile/RF_5_0> of sequential type is unconnected in block <ece453_top_level>.
 
 Final Macro Processing ...
 
@@ -557,8 +549,8 @@ Unit <ece453_top_level> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 391
- Flip-Flops                                            : 391
+# Registers                                            : 414
+ Flip-Flops                                            : 414
 # Shift Registers                                      : 63
  2-bit shift register                                  : 60
  3-bit shift register                                  : 3
@@ -590,32 +582,33 @@ Design Statistics
 # IOs                              : 362
 
 Cell Usage :
-# BELS                             : 1050
+# BELS                             : 1176
 #      GND                         : 1
 #      INV                         : 4
 #      LUT1                        : 30
-#      LUT2                        : 164
+#      LUT2                        : 179
 #      LUT2_D                      : 5
-#      LUT3                        : 28
-#      LUT3_D                      : 2
-#      LUT3_L                      : 87
-#      LUT4                        : 479
-#      LUT4_D                      : 45
-#      LUT4_L                      : 33
+#      LUT2_L                      : 14
+#      LUT3                        : 10
+#      LUT3_D                      : 7
+#      LUT3_L                      : 136
+#      LUT4                        : 546
+#      LUT4_D                      : 24
+#      LUT4_L                      : 46
 #      MUXCY                       : 36
-#      MUXF5                       : 103
+#      MUXF5                       : 105
 #      VCC                         : 1
 #      XORCY                       : 32
-# FlipFlops/Latches                : 454
+# FlipFlops/Latches                : 477
 #      FD                          : 126
 #      FDCE                        : 33
-#      FDE                         : 295
+#      FDE                         : 318
 # Shift Registers                  : 63
 #      SRL16                       : 63
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 306
-#      IBUF                        : 33
+# IO Buffers                       : 305
+#      IBUF                        : 32
 #      IOBUF                       : 32
 #      OBUF                        : 148
 #      OBUFT                       : 93
@@ -626,13 +619,13 @@ Device utilization summary:
 
 Selected Device : 3s1500fg676-4 
 
- Number of Slices:                      491  out of  13312     3%  
- Number of Slice Flip Flops:            454  out of  26624     1%  
- Number of 4 input LUTs:                940  out of  26624     3%  
-    Number used as logic:               877
+ Number of Slices:                      554  out of  13312     4%  
+ Number of Slice Flip Flops:            477  out of  26624     1%  
+ Number of 4 input LUTs:               1064  out of  26624     3%  
+    Number used as logic:              1001
     Number used as Shift registers:      63
  Number of IOs:                         362
- Number of bonded IOBs:                 307  out of    487    63%  
+ Number of bonded IOBs:                 306  out of    487    62%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -656,7 +649,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-FPGA_CLK1                          | BUFGP                  | 517   |
+FPGA_CLK1                          | BUFGP                  | 540   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -671,10 +664,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 12.916ns (Maximum Frequency: 77.421MHz)
-   Minimum input arrival time before clock: 5.958ns
-   Maximum output required time after clock: 10.433ns
-   Maximum combinational path delay: 7.342ns
+   Minimum period: 13.086ns (Maximum Frequency: 76.416MHz)
+   Minimum input arrival time before clock: 6.527ns
+   Maximum output required time after clock: 10.416ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
@@ -682,16 +675,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FPGA_CLK1'
-  Clock period: 12.916ns (frequency: 77.421MHz)
-  Total number of paths / destination ports: 60166 / 782
+  Clock period: 13.086ns (frequency: 76.416MHz)
+  Total number of paths / destination ports: 59546 / 828
 -------------------------------------------------------------------------
-Delay:               12.916ns (Levels of Logic = 10)
+Delay:               13.086ns (Levels of Logic = 10)
   Source:            MASTER/ARM_A_GEN[15].sr/out (FF)
-  Destination:       MASTER/myRegFile/RF_5_31 (FF)
+  Destination:       MASTER/myRegFile/RF_1_6 (FF)
   Source Clock:      FPGA_CLK1 rising
   Destination Clock: FPGA_CLK1 rising
 
-  Data Path: MASTER/ARM_A_GEN[15].sr/out to MASTER/myRegFile/RF_5_31
+  Data Path: MASTER/ARM_A_GEN[15].sr/out to MASTER/myRegFile/RF_1_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -701,41 +694,42 @@ Delay:               12.916ns (Levels of Logic = 10)
      MUXCY:CI->O           1   0.064   0.000  MASTER/myRegFile/select_and0000_wg_cy<2> (MASTER/myRegFile/select_and0000_wg_cy<2>)
      MUXCY:CI->O           1   0.064   0.000  MASTER/myRegFile/select_and0000_wg_cy<3> (MASTER/myRegFile/select_and0000_wg_cy<3>)
      MUXCY:CI->O           1   0.064   0.000  MASTER/myRegFile/select_and0000_wg_cy<4> (MASTER/myRegFile/select_and0000_wg_cy<4>)
-     MUXCY:CI->O         185   0.303   2.925  MASTER/myRegFile/select_and0000_wg_cy<5> (MASTER/myRegFile/select_and0000)
-     LUT2_D:I1->O         15   0.551   1.383  MASTER/myRegFile/select<1>1 (MASTER/myRegFile/select<1>)
-     LUT4:I1->O           40   0.551   1.899  MASTER/myRegFile/RF_5_mux0000<10>21 (MASTER/myRegFile/N55)
-     MUXF5:S->O            1   0.621   0.827  MASTER/myRegFile/RF_0_mux0000<16>11_SW0 (N258)
-     LUT4:I3->O            1   0.551   0.000  MASTER/myRegFile/RF_5_mux0000<16>1 (MASTER/myRegFile/RF_5_mux0000<16>)
-     FDE:D                     0.203          MASTER/myRegFile/RF_5_16
+     MUXCY:CI->O         204   0.303   3.033  MASTER/myRegFile/select_and0000_wg_cy<5> (MASTER/myRegFile/select_and0000)
+     LUT2_D:I1->O         16   0.551   1.263  MASTER/myRegFile/dout_mux0000<14>72 (MASTER/myRegFile/select<2>)
+     LUT4:I3->O           33   0.551   1.885  MASTER/myRegFile/RF_2_mux0000<10>21_1 (MASTER/myRegFile/RF_2_mux0000<10>21)
+     LUT4_D:I3->O          7   0.551   1.092  MASTER/myRegFile/RF_2_mux0000<0>21 (MASTER/myRegFile/N48)
+     LUT4:I3->O            1   0.551   0.000  MASTER/myRegFile/RF_2_mux0000<6>1 (MASTER/myRegFile/RF_2_mux0000<6>)
+     FDE:D                     0.203          MASTER/myRegFile/RF_2_6
     ----------------------------------------
-    Total                     12.916ns (4.743ns logic, 8.173ns route)
-                                       (36.7% logic, 63.3% route)
+    Total                     13.086ns (4.673ns logic, 8.413ns route)
+                                       (35.7% logic, 64.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'FPGA_CLK1'
-  Total number of paths / destination ports: 295 / 295
+  Total number of paths / destination ports: 318 / 318
 -------------------------------------------------------------------------
-Offset:              5.958ns (Levels of Logic = 2)
+Offset:              6.527ns (Levels of Logic = 3)
   Source:            SYS_RST_N (PAD)
-  Destination:       MASTER/myRegFile/RF_5_31 (FF)
+  Destination:       MASTER/myRegFile/RF_4_31 (FF)
   Destination Clock: FPGA_CLK1 rising
 
-  Data Path: SYS_RST_N to MASTER/myRegFile/RF_5_31
+  Data Path: SYS_RST_N to MASTER/myRegFile/RF_4_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   0.821   1.260  SYS_RST_N_IBUF (SYS_RST_N_IBUF)
-     LUT4:I0->O          184   0.551   2.724  MASTER/myRegFile/RF_0_and00001 (MASTER/myRegFile/RF_0_and0000)
-     FDE:CE                    0.602          MASTER/myRegFile/RF_1_0
+     IBUF:I->O             4   0.821   1.112  SYS_RST_N_IBUF (SYS_RST_N_IBUF)
+     LUT3_D:I1->LO         1   0.551   0.126  MASTER/myRegFile/io_dir_and000011 (N932)
+     LUT4:I3->O          191   0.551   2.764  MASTER/myRegFile/RF_0_and00001 (MASTER/myRegFile/RF_0_and0000)
+     FDE:CE                    0.602          MASTER/myRegFile/RF_2_0
     ----------------------------------------
-    Total                      5.958ns (1.974ns logic, 3.984ns route)
-                                       (33.1% logic, 66.9% route)
+    Total                      6.527ns (2.525ns logic, 4.002ns route)
+                                       (38.7% logic, 61.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FPGA_CLK1'
   Total number of paths / destination ports: 96 / 32
 -------------------------------------------------------------------------
-Offset:              10.433ns (Levels of Logic = 2)
+Offset:              10.416ns (Levels of Logic = 2)
   Source:            MASTER/sr_as/out (FF)
   Destination:       MZB_D<31> (PAD)
   Source Clock:      FPGA_CLK1 rising
@@ -744,42 +738,24 @@ Offset:              10.433ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              8   0.720   1.422  MASTER/sr_as/out (MASTER/sr_as/out)
+     FDE:C->Q              7   0.720   1.405  MASTER/sr_as/out (MASTER/sr_as/out)
      LUT2:I0->O           32   0.551   1.853  MASTER/ARM_D_and0000_inv1 (MASTER/ARM_D_and0000_inv)
      IOBUF:T->IO               5.887          MZB_D_31_IOBUF (MZB_D<31>)
     ----------------------------------------
-    Total                     10.433ns (7.158ns logic, 3.275ns route)
-                                       (68.6% logic, 31.4% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 14 / 14
--------------------------------------------------------------------------
-Delay:               7.342ns (Levels of Logic = 2)
-  Source:            MZB_D<24> (PAD)
-  Destination:       ACC_PORT_PIN<23> (PAD)
-
-  Data Path: MZB_D<24> to ACC_PORT_PIN<23>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IOBUF:IO->O           2   0.821   0.877  MZB_D_24_IOBUF (ACC_PORT_PIN_23_OBUF)
-     OBUF:I->O                 5.644          ACC_PORT_PIN_23_OBUF (ACC_PORT_PIN<23>)
-    ----------------------------------------
-    Total                      7.342ns (6.465ns logic, 0.877ns route)
-                                       (88.1% logic, 11.9% route)
+    Total                     10.416ns (7.158ns logic, 3.258ns route)
+                                       (68.7% logic, 31.3% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.73 secs
+Total CPU time to Xst completion: 13.54 secs
  
 --> 
 
-Total memory usage is 262800 kilobytes
+Total memory usage is 264208 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  155 (   0 filtered)
+Number of warnings :  146 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

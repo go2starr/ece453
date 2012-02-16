@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map M.81d on Thu Feb 09 18:04:24 2012
+// Written by: Map M.81d on Mon Feb 13 17:35:31 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -92,10 +92,10 @@ COMP "MZA_OE32" LOCATE = SITE "AD17" LEVEL 1;
 COMP "MZA_OE24" LOCATE = SITE "AB19" LEVEL 1;
 COMP "MZA_OE16" LOCATE = SITE "Y19" LEVEL 1;
 COMP "VGA_BLANK" LOCATE = SITE "U7" LEVEL 1;
-COMP "VD_SFL" LOCATE = SITE "AC7" LEVEL 1;
 COMP "MZB_CPLD_CLK0" LOCATE = SITE "G15" LEVEL 1;
 PIN MZB_CPLD_CLK0_pin<0> = BEL "MZB_CPLD_CLK0" PINNAME PAD;
 PIN "MZB_CPLD_CLK0_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "VD_SFL" LOCATE = SITE "AC7" LEVEL 1;
 COMP "SPI_SS" LOCATE = SITE "H21" LEVEL 1;
 COMP "VE_VSO" LOCATE = SITE "AA3" LEVEL 1;
 COMP "VE_TTX" LOCATE = SITE "Y7" LEVEL 1;

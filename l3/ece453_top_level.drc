@@ -1,7 +1,7 @@
 Release 12.4 Drc M.81d (nt64)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Thu Feb 09 18:04:40 2012
+Mon Feb 13 17:35:47 2012
 
 drc -z ece453_top_level.ncd ece453_top_level.pcf
 
@@ -34,6 +34,8 @@ WARNING:PhysDesignRules:367 - The signal <AC97_SDATA_IN_IBUF> is incomplete. The
 WARNING:PhysDesignRules:367 - The signal <VD_LLC_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <RS232_RX_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <MZB_CPLD_CLK0_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <VD_SFL_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
@@ -115,5 +117,5 @@ WARNING:PhysDesignRules:367 - The signal <VD_DATA_DEC<7>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <AC97_BIT_CLK_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-DRC detected 0 errors and 55 warnings.  Please see the previously displayed
+DRC detected 0 errors and 56 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
