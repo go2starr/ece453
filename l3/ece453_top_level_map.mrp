@@ -10,22 +10,22 @@ Target Device  : xc3s1500
 Target Package : fg676
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.52.76.2 $
-Mapped Date    : Mon Feb 13 17:35:28 2012
+Mapped Date    : Wed Feb 15 20:38:04 2012
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:  147
+Number of warnings:  139
 Logic Utilization:
-  Number of Slice Flip Flops:           477 out of  26,624    1%
-  Number of 4 input LUTs:             1,033 out of  26,624    3%
+  Number of Slice Flip Flops:           567 out of  26,624    2%
+  Number of 4 input LUTs:             1,098 out of  26,624    4%
 Logic Distribution:
-  Number of occupied Slices:            707 out of  13,312    5%
-    Number of Slices containing only related logic:     707 out of     707 100%
-    Number of Slices containing unrelated logic:          0 out of     707   0%
+  Number of occupied Slices:            770 out of  13,312    5%
+    Number of Slices containing only related logic:     770 out of     770 100%
+    Number of Slices containing unrelated logic:          0 out of     770   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,063 out of  26,624    3%
-    Number used as logic:               970
+  Total Number of 4 input LUTs:       1,128 out of  26,624    4%
+    Number used as logic:             1,035
     Number used as a route-thru:         30
     Number used as Shift registers:      63
 
@@ -35,11 +35,11 @@ Logic Distribution:
   Number of bonded IOBs:                271 out of     487   55%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                3.35
+Average Fanout of Non-Clock Nets:                3.34
 
 Peak Memory Usage:  267 MB
 Total REAL time to MAP completion:  3 secs 
-Total CPU time to MAP completion:   3 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -262,27 +262,11 @@ WARNING:MapLib:701 - Signal MZA_PIO<1> connected to top level port MZA_PIO<1>
    has been removed.
 WARNING:MapLib:701 - Signal MZA_PIO<0> connected to top level port MZA_PIO<0>
    has been removed.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<0>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<1>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<2>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<3>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <MZB_CPLD_RESET_OUT_IBUF> is
    incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<4>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<5>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <FPGA_CLK2_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <FPGA_CLK3_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<6>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP_SW<7>_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <VE_CLK_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
@@ -378,7 +362,7 @@ WARNING:PhysDesignRules:367 - The signal <AC97_BIT_CLK_IBUF> is incomplete. The
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network SPI_MISO_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 55 more times for the
+INFO:LIT:395 - The above info message is repeated 47 more times for the
    following (max. 5 shown):
    MZB_CPLD_RESET_OUT_IBUF,
    MZB_CPLD_OE_B_IBUF,

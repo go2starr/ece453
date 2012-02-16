@@ -136,11 +136,30 @@ module ece453_master_module(
    // Data INOUT
    wire [31:0] FPGA_DOUT;
    assign ARM_D = (~CPLD_RS5_B_clkd && CPLD_AS_clkd) ? FPGA_DOUT : 32'bz;
-   
+
+
+
+   ////////////////////////////////////////
+   // Write test
+   /*
    reg_file myRegFile (.addr(ARM_A_clkd), .din(ARM_D_clkd), .dout(FPGA_DOUT), .ws_n(CPLD_WS5_B_clkd),
 		       .rs_n(CPLD_RS5_B_clkd), .be(ARM_BE_B_clkd), .clk(FPGA_CLK1),
-		       .as(CPLD_AS_clkd), .rst(SYS_RST_N));
+		       .as(CPLD_AS_clkd), .rst(SYS_RST_N), .port(LED));
+    */
+   ////////////////////////////////////////
+
+   ////////////////////////////////////////
+   // Read test
+   wire [15:0] PORT;
+
+   generate
+      for (i = 0; i < 16; i = i + 1) begin : io_po
+         assign PORT[i] = DIP_SW[i%8] ? 1'b1 : 1'bz;
+      end
+   endgenerate
    
+   reg_file myRegFile (.addr(ARM_A_clkd), .din(ARM_D_clkd), .dout(FPGA_DOUT), .ws_n(CPLD_WS5_B_clkd), .rs_n(CPLD_RS5_B_clkd), .be(ARM_BE_B_clkd), .clk(FPGA_CLK1), .as(CPLD_AS_clkd), .rst(SYS_RST_N), .port(PORT));
+   ////////////////////////////////////////   
    
 
 endmodule

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map M.81d on Mon Feb 13 17:35:31 2012
+// Written by: Map M.81d on Wed Feb 15 20:38:07 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -15,8 +15,8 @@ COMP "DIP_SW<4>" LOCATE = SITE "Y12" LEVEL 1;
 COMP "MZB_D<0>" LOCATE = SITE "A12" LEVEL 1;
 COMP "MZB_A<10>" LOCATE = SITE "F10" LEVEL 1;
 COMP "FPGA_CLK1" LOCATE = SITE "B13" LEVEL 1;
-COMP "DIP_SW<5>" LOCATE = SITE "W11" LEVEL 1;
 COMP "FPGA_CLK2" LOCATE = SITE "C14" LEVEL 1;
+COMP "DIP_SW<5>" LOCATE = SITE "W11" LEVEL 1;
 COMP "FPGA_CLK3" LOCATE = SITE "AF14" LEVEL 1;
 COMP "MZB_D<1>" LOCATE = SITE "B12" LEVEL 1;
 COMP "MZB_A<11>" LOCATE = SITE "E10" LEVEL 1;

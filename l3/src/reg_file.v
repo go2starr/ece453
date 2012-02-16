@@ -16,14 +16,22 @@ module reg_file(addr,
    input             ws_n, rs_n, clk, as;
    input [3:0]       be;
    input             rst;
-   output reg [15:0]      port;
+   inout [15:0]      port;
 
+   // Port control
+   reg [15:0]        port_d;
+   reg [15:0]        io_dir;    // 1 input, 0 output
 
+   generate
+      genvar i;
+      for (i = 0; i < 16; i = i + 1) begin : port_assignments
+         assign port[i] = io_dir[i] ? port_d[i] : 1'bz;
+      end      
+   endgenerate
+   
    // Read/Write state
    reg               rw_cycle;
 
-   // I/O Port direction control (1 output, 0 input)
-   reg [15:0]        io_dir;
    
    // Address decoding
    reg [3:0]         select;
@@ -53,7 +61,7 @@ module reg_file(addr,
    end
    
    // Reg file
-   reg [31:0]    RF[5:0];
+   reg [31:0]    RF[10:0];
    
    // Counts
    reg [15:0]    write_count, read_count;
@@ -98,7 +106,7 @@ module reg_file(addr,
                 end
                 
                 else if (select == A_WRITE) begin
-                   dout <= port; // Don't care
+                   dout <= port & io_dir; // don't care
                 end
                 
                 else begin
@@ -139,7 +147,7 @@ module reg_file(addr,
                 end
 
                 else if (select == A_WRITE) begin
-                   port <= din & io_dir;
+                   port_d <= din & io_dir;
                 end
 
                 else if (select == A_READ) begin

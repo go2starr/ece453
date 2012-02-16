@@ -6,7 +6,7 @@ iseconfig/filter.filter -intstyle ise -dd _ngo -nt timestamp -uc
 src/ece453_TLL5000_spring2012.ucf -p xc3s1500-fg676-4 ece453_top_level.ngc
 ece453_top_level.ngd
 
-Reading NGO file "C:/vmware-shared/sandbox/ece453/l3/ece453_top_level.ngc" ...
+Reading NGO file "C:/vmware-shared/ece453/l3/ece453_top_level.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,10 +29,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 147540 kilobytes
+Total memory usage is 148180 kilobytes
 
 Writing NGD file "ece453_top_level.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total CPU time to NGDBUILD completion:   2 sec
 
 Writing NGDBUILD log file "ece453_top_level.bld"...
