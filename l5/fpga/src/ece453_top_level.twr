@@ -1,0 +1,133 @@
+--------------------------------------------------------------------------------
+Release 12.4 Trace  (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+C:/vmware-shared/ece453/l5/fpga/l5/iseconfig/filter.filter -intstyle ise -v 3
+-s 4 -n 3 -fastpaths -xml ece453_top_level.twx ece453_top_level.ncd -o
+ece453_top_level.twr ece453_top_level.pcf -ucf ece453_TLL5000_spring2012.ucf
+
+Design file:              ece453_top_level.ncd
+Physical constraint file: ece453_top_level.pcf
+Device,package,speed:     xc3s1500,fg676,-4 (PRODUCTION 1.39 2010-11-18)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock FPGA_CLK1
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+MZB_A<0>    |    1.588(R)|   -0.449(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<1>    |    0.897(R)|    0.108(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<2>    |    0.908(R)|    0.102(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<3>    |    1.520(R)|   -0.394(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<4>    |    0.897(R)|    0.111(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<5>    |    0.409(R)|    0.499(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<6>    |    0.448(R)|    0.457(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<7>    |    1.060(R)|   -0.030(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<8>    |    0.394(R)|    0.504(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<9>    |    0.434(R)|    0.463(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<10>   |    0.742(R)|    0.213(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<11>   |    0.782(R)|    0.179(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<12>   |    0.467(R)|    0.433(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<13>   |    0.985(R)|    0.010(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<14>   |    1.044(R)|   -0.052(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<15>   |    1.006(R)|   -0.020(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<16>   |    1.343(R)|   -0.276(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<17>   |    0.969(R)|    0.027(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<18>   |    0.481(R)|    0.422(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<19>   |    0.493(R)|    0.391(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<20>   |    0.447(R)|    0.455(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<21>   |    0.057(R)|    0.772(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<22>   |    0.399(R)|    0.498(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<23>   |    0.383(R)|    0.517(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_AS |    1.587(R)|   -0.441(R)|FPGA_CLK1_BUFGP   |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock FPGA_CLK1 to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+MZB_D<0>    |    9.950(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<1>    |    9.950(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<2>    |    9.968(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<3>    |    9.955(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<4>    |   10.697(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<5>    |   10.691(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<6>    |   11.065(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<7>    |   11.825(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<8>    |   12.171(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<9>    |   12.196(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<10>   |   12.883(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<11>   |   12.197(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<12>   |   12.575(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<13>   |   12.576(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<14>   |   12.945(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<15>   |   13.295(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<16>   |    9.940(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<17>   |   10.042(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<18>   |   10.181(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<19>   |    9.848(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<20>   |    9.612(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<21>   |   10.316(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<22>   |   10.328(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<23>   |   10.698(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<24>   |   10.692(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<25>   |   11.033(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<26>   |   11.442(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<27>   |   11.457(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<28>   |   11.826(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<29>   |   12.573(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<30>   |   13.224(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<31>   |   12.944(R)|FPGA_CLK1_BUFGP   |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock FPGA_CLK1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+FPGA_CLK1      |    9.015|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Feb 20 15:59:57 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 164 MB
+
+
+

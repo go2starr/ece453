@@ -1,0 +1,5 @@
+verilog work "shift_reg.v"
+verilog work "reg_file.v"
+verilog work "bdu.v"
+verilog work "ece453_master_module.v"
+verilog work "ece453_top_level.v"

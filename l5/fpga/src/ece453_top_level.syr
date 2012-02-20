@@ -1,0 +1,945 @@
+Release 12.4 - xst M.81d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: ece453_top_level.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ece453_top_level.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ece453_top_level"
+Output Format                      : NGC
+Target Device                      : xc3s1500-4-fg676
+
+---- Source Options
+Top Module Name                    : ece453_top_level
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "shift_reg.v" in library work
+Compiling verilog file "reg_file.v" in library work
+Module <shift_reg> compiled
+Compiling verilog file "bdu.v" in library work
+Module <reg_file> compiled
+Compiling verilog file "ece453_master_module.v" in library work
+Module <bdu> compiled
+Compiling verilog file "ece453_top_level.v" in library work
+Module <ece453_master_module> compiled
+Module <ece453_top_level> compiled
+No errors in compilation
+Analysis of file <"ece453_top_level.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ece453_top_level> in library <work>.
+
+Analyzing hierarchy for module <ece453_master_module> in library <work>.
+
+Analyzing hierarchy for module <bdu> in library <work>.
+
+Analyzing hierarchy for module <shift_reg> in library <work> with parameters.
+	DELAY = "00000000000000000000000000000001"
+	SIZE = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <reg_file> in library <work> with parameters.
+	A_JUNK = "1010"
+	A_RAND = "0000"
+
+Analyzing hierarchy for module <shift_reg> in library <work> with parameters.
+	DELAY = "00000000000000000000000000000000"
+	SIZE = "00000000000000000000000000000011"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ece453_top_level>.
+Module <ece453_top_level> is correct for synthesis.
+ 
+Analyzing module <ece453_master_module> in library <work>.
+Module <ece453_master_module> is correct for synthesis.
+ 
+Analyzing module <bdu> in library <work>.
+Module <bdu> is correct for synthesis.
+ 
+Analyzing module <shift_reg.1> in library <work>.
+	DELAY = 32'sb00000000000000000000000000000001
+	SIZE = 32'sb00000000000000000000000000000011
+Module <shift_reg.1> is correct for synthesis.
+ 
+Analyzing module <reg_file> in library <work>.
+	A_JUNK = 4'b1010
+	A_RAND = 4'b0000
+WARNING:Xst:905 - "reg_file.v" line 28: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <addr>
+Module <reg_file> is correct for synthesis.
+ 
+Analyzing module <shift_reg.2> in library <work>.
+	DELAY = 32'sb00000000000000000000000000000000
+	SIZE = 32'sb00000000000000000000000000000011
+Module <shift_reg.2> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <rw_cycle> in unit <reg_file> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <shift_reg_1>.
+    Related source file is "shift_reg.v".
+WARNING:Xst:1780 - Signal <shift_reg<5><0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <shift_reg<4><0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <out>.
+    Found 1-bit xor2 for signal <out$xor0000> created at line 19.
+    Found 4-bit register for signal <shift_reg<3:0>>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <shift_reg_1> synthesized.
+
+
+Synthesizing Unit <reg_file>.
+    Related source file is "reg_file.v".
+WARNING:Xst:647 - Input <be> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <rw_cycle> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <RF<10:1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <select>.
+    Found 32-bit register for signal <dout>.
+    Found 32-bit register for signal <RF<0>>.
+    Found 32-bit adder for signal <RF_0$addsub0000> created at line 51.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <reg_file> synthesized.
+
+
+Synthesizing Unit <shift_reg_2>.
+    Related source file is "shift_reg.v".
+WARNING:Xst:1780 - Signal <shift_reg<5><0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <shift_reg<4><0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <shift_reg<3><0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <out>.
+    Found 1-bit xor2 for signal <out$xor0000> created at line 19.
+    Found 3-bit register for signal <shift_reg<2:0>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <shift_reg_2> synthesized.
+
+
+Synthesizing Unit <bdu>.
+    Related source file is "bdu.v".
+WARNING:Xst:647 - Input <rs_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ws_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <ws> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <rs> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 32-bit tristate buffer for signal <data>.
+    Summary:
+	inferred  32 Tristate(s).
+Unit <bdu> synthesized.
+
+
+Synthesizing Unit <ece453_master_module>.
+    Related source file is "ece453_master_module.v".
+WARNING:Xst:647 - Input <SPI_MISO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <PIO<58>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<63>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VD_NRESET> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PIO<64>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<59>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <ACC_PORT_PIN> is never assigned. Tied to value 0000000000000000000000000000000000.
+WARNING:Xst:647 - Input <CPLD_RS1_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <PIO_DIR0> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PIO<65>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_CS5_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <PIO<66>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <PIO_DIR8> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PS2_MOUSE_CLK> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<67>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <LCD_DATA> is never assigned. Tied to value 0000.
+WARNING:Xst:2563 - Inout <VE_FIELD_VSYNC> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <LCD_E> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <VD_HS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <SPI_SS> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <DIP_SW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VE_VSO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FLASH_ADDR> is never assigned. Tied to value 00000000000000000000000.
+WARNING:Xst:647 - Input <VD_SFL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RS232_RTS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <PS2_ENABLED> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <AC97_SYNC> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <CPLD_WS1_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <RS232_CTS> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <VE_DATA> is never assigned. Tied to value 00000000.
+WARNING:Xst:647 - Input <CPLD_NFIO4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CPLD_NFIO5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FPGA_CLK_BANK_0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FPGA_CLK_BANK_1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <VE_BLANK> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VGA_PIX_CLK> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FPGA_CLK_BANK_5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FLASH_NWE> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <VE_HSYNC> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VE_SCRESET_RTC> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <AC97_ID_0> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <AC97_BIT_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VD_LLC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <AC97_ID_1> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <FLASH_NWP> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<10>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_CS0_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VD_VS_FIELD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <PS2_KEYB_DATA> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <FLASH_DATA<11>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_OE_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <LCD_RS> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <LCD_BACK> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <ARM_RESET_OUT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <FLASH_DATA<12>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <LCD_RW> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <VGA_BLANK> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FPGA_CLK2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <FLASH_DATA<13>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <FPGA_CLK3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VE_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <VGA_HSYNC> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <PIO_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <FLASH_DATA<14>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VGA_PSAVE> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <VD_DATA_DEC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <FLASH_DATA<15>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_CS1_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VE_CLAMP> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <PIO_DIR16> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <RS232_RX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <PIO_DIR24> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <AC97_RESET_N> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <VE_CSO_HSO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VE_TTXREQ> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <PIO_DIR32> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <PIO_DIR40> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <AC97_SDATA_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <RS232_TX> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PS2_MOUSE_DATA> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VD_NPWRDWN> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<0>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_CS2_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FLASH_NRESET> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <PIO_OE_B0> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<1>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <SPI_SCK> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <VGA_B> is never assigned. Tied to value 00000000.
+WARNING:Xst:2563 - Inout <FLASH_DATA<2>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <PIO_OE_B8> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <VGA_G> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <VE_RESET> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<3>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <SPI_MOSI> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <PIO_OE_B16> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <ARM_RW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <PIO_OE_B24> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<4>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <PIO_OE_B32> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <VGA_R> is never assigned. Tied to value 00000000.
+WARNING:Xst:2563 - Inout <FLASH_DATA<5>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <AC97_SDATA_OUT> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PIO<50>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <PIO_OE_B40> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <ARM_CS3_B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FLASH_NBYTE> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <FLASH_NRYBY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FLASH_NCE> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<51>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VGA_VSYNC> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<52>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <FLASH_DATA<8>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<53>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<48>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <VE_PAL_NTSC> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <FLASH_DATA<9>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<54>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<49>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <ARM_IRQ> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <PIO_OUT> is never assigned. Tied to value 000000000000000000000000000000000000000000000000.
+WARNING:Xst:2563 - Inout <I2C_SDA> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <VD_INTRQ> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <FLASH_NOE_E> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PIO<55>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<60>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PS2_KEYB_CLK> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <I2C_SCL> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<61>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<56>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <ARM_CLK0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <SYS_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <VE_TTX> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <PIO<62>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <PIO<57>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <LED> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <VGA_SYNC> is never assigned. Tied to value 0.
+    Found 1-bit tristate buffer for signal <PS2_MOUSE_CLK>.
+    Found 1-bit tristate buffer for signal <VE_FIELD_VSYNC>.
+    Found 1-bit tristate buffer for signal <VE_BLANK>.
+    Found 1-bit tristate buffer for signal <VE_HSYNC>.
+    Found 1-bit tristate buffer for signal <PS2_KEYB_DATA>.
+    Found 1-bit tristate buffer for signal <PS2_MOUSE_DATA>.
+    Found 1-bit tristate buffer for signal <I2C_SDA>.
+    Found 1-bit tristate buffer for signal <PS2_KEYB_CLK>.
+    Found 1-bit tristate buffer for signal <I2C_SCL>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<15>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<14>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<13>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<12>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<11>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<10>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<9>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<8>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<7>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<6>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<5>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<4>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<3>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<2>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<1>>.
+    Found 1-bit tristate buffer for signal <FLASH_DATA<0>>.
+    Found 1-bit tristate buffer for signal <PIO<67>>.
+    Found 1-bit tristate buffer for signal <PIO<66>>.
+    Found 1-bit tristate buffer for signal <PIO<65>>.
+    Found 1-bit tristate buffer for signal <PIO<64>>.
+    Found 1-bit tristate buffer for signal <PIO<63>>.
+    Found 1-bit tristate buffer for signal <PIO<62>>.
+    Found 1-bit tristate buffer for signal <PIO<61>>.
+    Found 1-bit tristate buffer for signal <PIO<60>>.
+    Found 1-bit tristate buffer for signal <PIO<59>>.
+    Found 1-bit tristate buffer for signal <PIO<58>>.
+    Found 1-bit tristate buffer for signal <PIO<57>>.
+    Found 1-bit tristate buffer for signal <PIO<56>>.
+    Found 1-bit tristate buffer for signal <PIO<55>>.
+    Found 1-bit tristate buffer for signal <PIO<54>>.
+    Found 1-bit tristate buffer for signal <PIO<53>>.
+    Found 1-bit tristate buffer for signal <PIO<52>>.
+    Found 1-bit tristate buffer for signal <PIO<51>>.
+    Found 1-bit tristate buffer for signal <PIO<50>>.
+    Found 1-bit tristate buffer for signal <PIO<49>>.
+    Found 1-bit tristate buffer for signal <PIO<48>>.
+    Summary:
+	inferred  45 Tristate(s).
+Unit <ece453_master_module> synthesized.
+
+
+Synthesizing Unit <ece453_top_level>.
+    Related source file is "ece453_top_level.v".
+    Found 48-bit tristate buffer for signal <MZA_PIO<47:0>>.
+    Summary:
+	inferred  48 Tristate(s).
+Unit <ece453_top_level> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 257
+ 1-bit register                                        : 255
+ 32-bit register                                       : 2
+# Tristates                                            : 94
+ 1-bit tristate buffer                                 : 93
+ 32-bit tristate buffer                                : 1
+# Xors                                                 : 63
+ 1-bit xor2                                            : 63
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <be_gen[0].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <be_gen[1].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <be_gen[2].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <be_gen[3].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <shift_reg_3> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <shift_reg_3> (without init value) has a constant value of 0 in block <sr_ws>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_2> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_2> (without init value) has a constant value of 0 in block <sr_ws>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_1> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_1> (without init value) has a constant value of 0 in block <sr_ws>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_0> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_0> (without init value) has a constant value of 0 in block <sr_ws>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <out> (without init value) has a constant value of 0 in block <sr_ws>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <sr_rs> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <sr_ws> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[0].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[1].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[2].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[3].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[4].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[5].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[6].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[7].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[8].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[9].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[10].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[11].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[12].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[13].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[14].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[15].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[16].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[17].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[18].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[19].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[20].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[21].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[22].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[23].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[24].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[25].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[26].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[27].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[28].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[29].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[30].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <data_gen[31].sr> is unconnected in block <myBdu>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 319
+ Flip-Flops                                            : 319
+# Xors                                                 : 63
+ 1-bit xor2                                            : 63
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <bdu>: instances <sr_rs>, <sr_ws> of unit <shift_reg_1> are equivalent, second instance is removed
+WARNING:Xst:1710 - FF/Latch <sr_rs/shift_reg_3> (without init value) has a constant value of 0 in block <bdu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sr_rs/shift_reg_2> (without init value) has a constant value of 0 in block <bdu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sr_rs/shift_reg_1> (without init value) has a constant value of 0 in block <bdu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sr_rs/shift_reg_0> (without init value) has a constant value of 0 in block <bdu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sr_rs/out> (without init value) has a constant value of 0 in block <bdu>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ece453_top_level> ...
+
+Optimizing unit <reg_file> ...
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[1].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[1].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[1].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[1].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/out> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
+WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ece453_top_level, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <ece453_top_level> :
+	Found 3-bit shift register for signal <MASTER/myBdu/sr_as/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[23].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[22].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[21].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[20].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[19].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[18].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[17].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[16].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[15].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[14].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[13].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[12].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[11].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[10].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[9].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[8].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[7].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[6].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[5].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[4].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[3].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[2].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[1].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[0].sr/shift_reg_1>.
+Unit <ece453_top_level> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 114
+ Flip-Flops                                            : 114
+# Shift Registers                                      : 25
+ 2-bit shift register                                  : 24
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ece453_top_level.ngr
+Top Level Output File Name         : ece453_top_level
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 362
+
+Cell Usage :
+# BELS                             : 169
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 31
+#      LUT2                        : 58
+#      LUT4                        : 6
+#      MUXCY                       : 37
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 139
+#      FD                          : 50
+#      FDCE                        : 42
+#      FDE                         : 25
+#      FDPE                        : 22
+# Shift Registers                  : 25
+#      SRL16                       : 25
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 299
+#      IBUF                        : 26
+#      OBUF                        : 148
+#      OBUFT                       : 125
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1500fg676-4 
+
+ Number of Slices:                       82  out of  13312     0%  
+ Number of Slice Flip Flops:            139  out of  26624     0%  
+ Number of 4 input LUTs:                123  out of  26624     0%  
+    Number used as logic:                98
+    Number used as Shift registers:      25
+ Number of IOs:                         362
+ Number of bonded IOBs:                 300  out of    487    61%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+FPGA_CLK1                          | BUFGP                  | 164   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------+------------------------------------+-------+
+Control Signal                                                                     | Buffer(FF name)                    | Load  |
+-----------------------------------------------------------------------------------+------------------------------------+-------+
+MASTER/myBdu/myRegFile/dout_Acst_inv(MASTER/myBdu/myRegFile/dout_Acst_inv1_INV_0:O)| NONE(MASTER/myBdu/myRegFile/RF_0_0)| 64    |
+-----------------------------------------------------------------------------------+------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.530ns (Maximum Frequency: 117.234MHz)
+   Minimum input arrival time before clock: 2.061ns
+   Maximum output required time after clock: 10.876ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FPGA_CLK1'
+  Clock period: 8.530ns (frequency: 117.234MHz)
+  Total number of paths / destination ports: 2285 / 228
+-------------------------------------------------------------------------
+Delay:               8.530ns (Levels of Logic = 8)
+  Source:            MASTER/myBdu/address_gen[8].sr/out (FF)
+  Destination:       MASTER/myBdu/myRegFile/RF_0_31 (FF)
+  Source Clock:      FPGA_CLK1 rising
+  Destination Clock: FPGA_CLK1 rising
+
+  Data Path: MASTER/myBdu/address_gen[8].sr/out to MASTER/myBdu/myRegFile/RF_0_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.720   1.140  MASTER/myBdu/address_gen[8].sr/out (MASTER/myBdu/address_gen[8].sr/out)
+     LUT4:I0->O            1   0.551   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_lut<0> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<0> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<1> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<2> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<3> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<4> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          33   0.303   2.054  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<5> (MASTER/myBdu/myRegFile/select<0>)
+     LUT2:I1->O           32   0.551   1.853  MASTER/myBdu/myRegFile/RF_0_not00021 (MASTER/myBdu/myRegFile/RF_0_not0002)
+     FDCE:CE                   0.602          MASTER/myBdu/myRegFile/RF_0_0
+    ----------------------------------------
+    Total                      8.530ns (3.483ns logic, 5.047ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FPGA_CLK1'
+  Total number of paths / destination ports: 25 / 25
+-------------------------------------------------------------------------
+Offset:              2.061ns (Levels of Logic = 1)
+  Source:            MZB_CPLD_AS (PAD)
+  Destination:       MASTER/myBdu/sr_as/Mshreg_shift_reg_1 (FF)
+  Destination Clock: FPGA_CLK1 rising
+
+  Data Path: MZB_CPLD_AS to MASTER/myBdu/sr_as/Mshreg_shift_reg_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  MZB_CPLD_AS_IBUF (MZB_CPLD_AS_IBUF)
+     SRL16:D                   0.439          MASTER/myBdu/sr_as/Mshreg_shift_reg_1
+    ----------------------------------------
+    Total                      2.061ns (1.260ns logic, 0.801ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FPGA_CLK1'
+  Total number of paths / destination ports: 64 / 32
+-------------------------------------------------------------------------
+Offset:              10.876ns (Levels of Logic = 2)
+  Source:            MASTER/myBdu/sr_as/out (FF)
+  Destination:       MZB_D<31> (PAD)
+  Source Clock:      FPGA_CLK1 rising
+
+  Data Path: MASTER/myBdu/sr_as/out to MZB_D<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             34   0.720   1.865  MASTER/myBdu/sr_as/out (MASTER/myBdu/sr_as/out)
+     INV:I->O             32   0.551   1.853  MASTER/myBdu/data_and0000_inv1_INV_0 (MASTER/myBdu/data_and0000_inv)
+     OBUFT:T->O                5.887          MZB_D_31_OBUFT (MZB_D<31>)
+    ----------------------------------------
+    Total                     10.876ns (7.158ns logic, 3.718ns route)
+                                       (65.8% logic, 34.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.88 secs
+ 
+--> 
+
+Total memory usage is 247108 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  350 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
