@@ -4,13 +4,13 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: ece453_top_level.prj
 
@@ -175,7 +175,6 @@ Module <shift_reg.2> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <rw_cycle> in unit <reg_file> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <shift_reg_1>.
     Related source file is "shift_reg.v".
@@ -191,17 +190,18 @@ Unit <shift_reg_1> synthesized.
 
 Synthesizing Unit <reg_file>.
     Related source file is "reg_file.v".
-WARNING:Xst:647 - Input <be> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:646 - Signal <rw_cycle> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:647 - Input <be<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <RF<10:1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <select>.
     Found 32-bit register for signal <dout>.
-    Found 32-bit adder for signal <$sub0000> created at line 51.
+    Found 32-bit adder for signal <$sub0000> created at line 54.
     Found 32-bit register for signal <RF<0>>.
-    Found 1-bit xor2 for signal <RF_0$xor0000> created at line 51.
-    Found 1-bit xor2 for signal <RF_0$xor0001> created at line 51.
-    Found 1-bit xor2 for signal <RF_0$xor0002> created at line 51.
+    Found 1-bit xor2 for signal <RF_0$xor0000> created at line 54.
+    Found 1-bit xor2 for signal <RF_0$xor0001> created at line 54.
+    Found 1-bit xor2 for signal <RF_0$xor0002> created at line 54.
+    Found 1-bit register for signal <rw_cycle>.
     Summary:
+	inferred  33 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 Unit <reg_file> synthesized.
 
@@ -436,8 +436,8 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  32-bit adder                                          : 1
-# Registers                                            : 257
- 1-bit register                                        : 255
+# Registers                                            : 258
+ 1-bit register                                        : 256
  32-bit register                                       : 2
 # Tristates                                            : 94
  1-bit tristate buffer                                 : 93
@@ -457,8 +457,6 @@ WARNING:Xst:1290 - Hierarchical block <be_gen[1].sr> is unconnected in block <my
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <be_gen[2].sr> is unconnected in block <myBdu>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <be_gen[3].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
 WARNING:Xst:1710 - FF/Latch <shift_reg_3> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <shift_reg_3> (without init value) has a constant value of 0 in block <sr_ws>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shift_reg_2> (without init value) has a constant value of 0 in block <sr_rs>. This FF/Latch will be trimmed during the optimization process.
@@ -473,70 +471,6 @@ WARNING:Xst:1290 - Hierarchical block <sr_rs> is unconnected in block <myBdu>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <sr_ws> is unconnected in block <myBdu>.
    It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[0].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[1].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[2].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[3].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[4].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[5].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[6].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[7].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[8].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[9].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[10].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[11].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[12].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[13].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[14].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[15].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[16].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[17].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[18].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[19].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[20].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[21].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[22].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[23].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[24].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[25].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[26].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[27].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[28].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[29].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[30].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <data_gen[31].sr> is unconnected in block <myBdu>.
-   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -544,8 +478,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  32-bit adder                                          : 1
-# Registers                                            : 319
- Flip-Flops                                            : 319
+# Registers                                            : 320
+ Flip-Flops                                            : 320
 # Xors                                                 : 66
  1-bit xor2                                            : 66
 
@@ -564,10 +498,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sr_rs/out> (without
 Optimizing unit <ece453_top_level> ...
 
 Optimizing unit <reg_file> ...
-WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[3].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
 WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/out> of sequential type is unconnected in block <ece453_top_level>.
 WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
 WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[2].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
@@ -580,143 +510,48 @@ WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/out> of sequential type is un
 WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
 WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
 WARNING:Xst:2677 - Node <MASTER/myBdu/be_gen[0].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[31].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[30].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[29].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[28].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[27].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[26].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[25].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[24].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[23].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[22].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[21].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[20].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[19].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[18].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[17].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[16].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[15].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[14].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[13].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[12].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[11].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[10].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[9].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[8].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[7].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[6].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[5].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[4].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[3].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[2].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[1].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/out> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/shift_reg_0> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/shift_reg_1> of sequential type is unconnected in block <ece453_top_level>.
-WARNING:Xst:2677 - Node <MASTER/myBdu/data_gen[0].sr/shift_reg_2> of sequential type is unconnected in block <ece453_top_level>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ece453_top_level, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block ece453_top_level, actual ratio is 1.
 
 Final Macro Processing ...
 
 Processing Unit <ece453_top_level> :
 	Found 3-bit shift register for signal <MASTER/myBdu/sr_as/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/be_gen[3].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[31].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[30].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[29].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[28].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[27].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[26].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[25].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[24].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[23].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[22].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[21].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[20].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[19].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[18].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[17].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[16].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[15].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[14].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[13].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[12].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[11].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[10].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[9].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[8].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[7].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[6].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[5].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[4].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[3].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[2].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[1].sr/shift_reg_1>.
+	Found 2-bit shift register for signal <MASTER/myBdu/data_gen[0].sr/shift_reg_1>.
 	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[23].sr/shift_reg_1>.
 	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[22].sr/shift_reg_1>.
 	Found 2-bit shift register for signal <MASTER/myBdu/address_gen[21].sr/shift_reg_1>.
@@ -747,10 +582,10 @@ Unit <ece453_top_level> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 114
- Flip-Flops                                            : 114
-# Shift Registers                                      : 25
- 2-bit shift register                                  : 24
+# Registers                                            : 181
+ Flip-Flops                                            : 181
+# Shift Registers                                      : 58
+ 2-bit shift register                                  : 57
  3-bit shift register                                  : 1
 
 =========================================================================
@@ -780,26 +615,28 @@ Design Statistics
 # IOs                              : 362
 
 Cell Usage :
-# BELS                             : 77
+# BELS                             : 141
 #      GND                         : 1
 #      INV                         : 2
-#      LUT2                        : 61
-#      LUT4                        : 6
+#      LUT2                        : 91
+#      LUT3                        : 31
+#      LUT4                        : 9
 #      MUXCY                       : 6
 #      VCC                         : 1
-# FlipFlops/Latches                : 139
-#      FD                          : 50
-#      FDCE                        : 29
-#      FDE                         : 25
-#      FDPE                        : 35
-# Shift Registers                  : 25
-#      SRL16                       : 25
+# FlipFlops/Latches                : 239
+#      FD                          : 116
+#      FDCE                        : 43
+#      FDE                         : 58
+#      FDPE                        : 22
+# Shift Registers                  : 58
+#      SRL16                       : 58
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 299
-#      IBUF                        : 26
+# IO Buffers                       : 300
+#      IBUF                        : 27
+#      IOBUF                       : 32
 #      OBUF                        : 148
-#      OBUFT                       : 125
+#      OBUFT                       : 93
 =========================================================================
 
 Device utilization summary:
@@ -807,13 +644,13 @@ Device utilization summary:
 
 Selected Device : 3s1500fg676-4 
 
- Number of Slices:                       83  out of  13312     0%  
- Number of Slice Flip Flops:            139  out of  26624     0%  
- Number of 4 input LUTs:                 94  out of  26624     0%  
-    Number used as logic:                69
-    Number used as Shift registers:      25
+ Number of Slices:                      140  out of  13312     1%  
+ Number of Slice Flip Flops:            239  out of  26624     0%  
+ Number of 4 input LUTs:                191  out of  26624     0%  
+    Number used as logic:               133
+    Number used as Shift registers:      58
  Number of IOs:                         362
- Number of bonded IOBs:                 300  out of    487    61%  
+ Number of bonded IOBs:                 301  out of    487    61%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -837,7 +674,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-FPGA_CLK1                          | BUFGP                  | 164   |
+FPGA_CLK1                          | BUFGP                  | 297   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -845,16 +682,16 @@ Asynchronous Control Signals Information:
 -----------------------------------------------------------------------------------+------------------------------------+-------+
 Control Signal                                                                     | Buffer(FF name)                    | Load  |
 -----------------------------------------------------------------------------------+------------------------------------+-------+
-MASTER/myBdu/myRegFile/RF_0_Acst_inv(MASTER/myBdu/myRegFile/RF_0_Acst_inv1_INV_0:O)| NONE(MASTER/myBdu/myRegFile/RF_0_0)| 64    |
+MASTER/myBdu/myRegFile/dout_Acst_inv(MASTER/myBdu/myRegFile/dout_Acst_inv1_INV_0:O)| NONE(MASTER/myBdu/myRegFile/RF_0_0)| 65    |
 -----------------------------------------------------------------------------------+------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 8.530ns (Maximum Frequency: 117.234MHz)
+   Minimum period: 8.403ns (Maximum Frequency: 119.006MHz)
    Minimum input arrival time before clock: 2.061ns
-   Maximum output required time after clock: 10.876ns
+   Maximum output required time after clock: 9.932ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -863,16 +700,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FPGA_CLK1'
-  Clock period: 8.530ns (frequency: 117.234MHz)
-  Total number of paths / destination ports: 1792 / 228
+  Clock period: 8.403ns (frequency: 119.006MHz)
+  Total number of paths / destination ports: 2120 / 362
 -------------------------------------------------------------------------
-Delay:               8.530ns (Levels of Logic = 8)
+Delay:               8.403ns (Levels of Logic = 8)
   Source:            MASTER/myBdu/address_gen[8].sr/out (FF)
-  Destination:       MASTER/myBdu/myRegFile/RF_0_0 (FF)
+  Destination:       MASTER/myBdu/myRegFile/RF_0_31 (FF)
   Source Clock:      FPGA_CLK1 rising
   Destination Clock: FPGA_CLK1 rising
 
-  Data Path: MASTER/myBdu/address_gen[8].sr/out to MASTER/myBdu/myRegFile/RF_0_0
+  Data Path: MASTER/myBdu/address_gen[8].sr/out to MASTER/myBdu/myRegFile/RF_0_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -883,16 +720,16 @@ Delay:               8.530ns (Levels of Logic = 8)
      MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<2> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<2>)
      MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<3> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<3>)
      MUXCY:CI->O           1   0.064   0.000  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<4> (MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O          33   0.303   2.054  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<5> (MASTER/myBdu/myRegFile/select<0>)
-     LUT2:I1->O           32   0.551   1.853  MASTER/myBdu/myRegFile/RF_0_not00021 (MASTER/myBdu/myRegFile/RF_0_not0002)
+     MUXCY:CI->O          33   0.303   1.927  MASTER/myBdu/myRegFile/select_cmp_eq0000_wg_cy<5> (MASTER/myBdu/myRegFile/select<0>)
+     LUT3:I2->O           32   0.551   1.853  MASTER/myBdu/myRegFile/RF_0_not00011 (MASTER/myBdu/myRegFile/RF_0_not0001)
      FDCE:CE                   0.602          MASTER/myBdu/myRegFile/RF_0_0
     ----------------------------------------
-    Total                      8.530ns (3.483ns logic, 5.047ns route)
-                                       (40.8% logic, 59.2% route)
+    Total                      8.403ns (3.483ns logic, 4.920ns route)
+                                       (41.4% logic, 58.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'FPGA_CLK1'
-  Total number of paths / destination ports: 25 / 25
+  Total number of paths / destination ports: 58 / 58
 -------------------------------------------------------------------------
 Offset:              2.061ns (Levels of Logic = 1)
   Source:            MZB_CPLD_AS (PAD)
@@ -913,7 +750,7 @@ Offset:              2.061ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'FPGA_CLK1'
   Total number of paths / destination ports: 64 / 32
 -------------------------------------------------------------------------
-Offset:              10.876ns (Levels of Logic = 2)
+Offset:              9.932ns (Levels of Logic = 2)
   Source:            MASTER/myBdu/sr_as/out (FF)
   Destination:       MZB_D<31> (PAD)
   Source Clock:      FPGA_CLK1 rising
@@ -922,24 +759,24 @@ Offset:              10.876ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             34   0.720   1.865  MASTER/myBdu/sr_as/out (MASTER/myBdu/sr_as/out)
+     FDE:C->Q              5   0.720   0.921  MASTER/myBdu/sr_as/out (MASTER/myBdu/sr_as/out)
      INV:I->O             32   0.551   1.853  MASTER/myBdu/data_and0000_inv1_INV_0 (MASTER/myBdu/data_and0000_inv)
-     OBUFT:T->O                5.887          MZB_D_31_OBUFT (MZB_D<31>)
+     IOBUF:T->IO               5.887          MZB_D_31_IOBUF (MZB_D<31>)
     ----------------------------------------
-    Total                     10.876ns (7.158ns logic, 3.718ns route)
-                                       (65.8% logic, 34.2% route)
+    Total                      9.932ns (7.158ns logic, 2.774ns route)
+                                       (72.1% logic, 27.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.47 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.77 secs
  
 --> 
 
-Total memory usage is 247940 kilobytes
+Total memory usage is 249284 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  350 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :  184 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

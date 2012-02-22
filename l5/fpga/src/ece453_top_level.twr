@@ -41,74 +41,107 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Setup/Hold to clock FPGA_CLK1
-------------+------------+------------+------------------+--------+
-            |Max Setup to|Max Hold to |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-MZB_A<0>    |    1.275(R)|   -0.200(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<1>    |    0.897(R)|    0.108(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<2>    |    0.913(R)|    0.096(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<3>    |    0.934(R)|    0.075(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<4>    |    0.776(R)|    0.208(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<5>    |    0.406(R)|    0.503(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<6>    |    0.452(R)|    0.453(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<7>    |    0.430(R)|    0.477(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<8>    |    0.389(R)|    0.510(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<9>    |    0.432(R)|    0.465(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<10>   |    0.453(R)|    0.447(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<11>   |    0.785(R)|    0.172(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<12>   |    0.465(R)|    0.436(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<13>   |    1.175(R)|   -0.143(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<14>   |    0.980(R)|    0.004(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<15>   |    1.007(R)|   -0.016(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<16>   |    0.534(R)|    0.354(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<17>   |    1.604(R)|   -0.487(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<18>   |    0.591(R)|    0.330(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<19>   |    0.502(R)|    0.395(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<20>   |    0.740(R)|    0.216(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<21>   |    0.056(R)|    0.774(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<22>   |    0.712(R)|    0.249(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_A<23>   |    0.387(R)|    0.512(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_CPLD_AS |    1.621(R)|   -0.470(R)|FPGA_CLK1_BUFGP   |   0.000|
-------------+------------+------------+------------------+--------+
+--------------+------------+------------+------------------+--------+
+              |Max Setup to|Max Hold to |                  | Clock  |
+Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------------+--------+
+MZB_A<0>      |    1.588(R)|   -0.449(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<1>      |    1.571(R)|   -0.431(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<2>      |    0.908(R)|    0.102(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<3>      |    0.921(R)|    0.092(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<4>      |    0.899(R)|    0.109(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<5>      |    0.403(R)|    0.506(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<6>      |    0.378(R)|    0.523(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<7>      |    0.514(R)|    0.419(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<8>      |    0.087(R)|    0.752(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<9>      |    0.062(R)|    0.767(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<10>     |    0.424(R)|    0.469(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<11>     |    0.608(R)|    0.310(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<12>     |    0.470(R)|    0.429(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<13>     |    0.959(R)|    0.019(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<14>     |    1.168(R)|   -0.142(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<15>     |    1.004(R)|   -0.013(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<16>     |    0.873(R)|    0.095(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<17>     |    0.978(R)|    0.017(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<18>     |    0.500(R)|    0.399(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<19>     |    0.482(R)|    0.420(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<20>     |    0.435(R)|    0.470(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<21>     |    0.770(R)|    0.187(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<22>     |    0.831(R)|    0.122(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_A<23>     |    0.401(R)|    0.505(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_AS   |    1.586(R)|   -0.440(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_CPLD_BE3_B|    1.486(R)|   -0.397(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<0>      |    0.716(R)|    0.249(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<1>      |    0.866(R)|    0.125(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<2>      |    0.385(R)|    0.515(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<3>      |    0.450(R)|    0.455(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<4>      |    0.055(R)|    0.774(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<5>      |    0.523(R)|    0.366(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<6>      |    0.848(R)|    0.101(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<7>      |    0.826(R)|    0.120(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<8>      |    0.808(R)|    0.139(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<9>      |    0.479(R)|    0.417(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<10>     |    0.743(R)|    0.212(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<11>     |    0.418(R)|    0.475(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<12>     |    0.408(R)|    0.488(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<13>     |    0.722(R)|    0.236(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<14>     |    0.556(R)|    0.370(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<15>     |    0.579(R)|    0.344(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<16>     |    0.752(R)|    0.209(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<17>     |    0.927(R)|    0.069(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<18>     |    0.737(R)|    0.232(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<19>     |    0.715(R)|    0.250(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<20>     |    0.718(R)|    0.256(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<21>     |    0.730(R)|    0.231(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<22>     |    0.456(R)|    0.445(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<23>     |    0.507(R)|    0.383(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<24>     |    0.142(R)|    0.687(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<25>     |    0.819(R)|    0.129(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<26>     |    0.697(R)|    0.205(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<27>     |    0.480(R)|    0.403(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<28>     |    0.162(R)|    0.663(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<29>     |    0.795(R)|    0.163(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<30>     |    0.468(R)|    0.432(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<31>     |    0.774(R)|    0.188(R)|FPGA_CLK1_BUFGP   |   0.000|
+--------------+------------+------------+------------------+--------+
 
 Clock FPGA_CLK1 to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-MZB_D<0>    |    9.876(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<1>    |    9.867(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<2>    |    9.510(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<3>    |    9.513(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<4>    |   10.232(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<5>    |   10.241(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<6>    |   10.971(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<7>    |   11.356(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<8>    |   11.333(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<9>    |   12.095(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<10>   |   11.695(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<11>   |   12.096(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<12>   |   12.474(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<13>   |   12.475(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<14>   |   12.834(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<15>   |   12.835(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<16>   |   10.217(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<17>   |   10.209(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<18>   |   10.203(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<19>   |    9.865(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<20>   |    9.876(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<21>   |    9.871(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<22>   |    9.871(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<23>   |   10.592(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<24>   |   10.242(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<25>   |   10.603(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<26>   |   10.972(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<27>   |   11.356(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<28>   |   11.716(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<29>   |   12.096(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<30>   |   12.036(R)|FPGA_CLK1_BUFGP   |   0.000|
-MZB_D<31>   |   12.475(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<0>    |    9.515(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<1>    |    9.200(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<2>    |    9.903(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<3>    |    9.885(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<4>    |   10.632(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<5>    |   10.615(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<6>    |   11.000(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<7>    |   11.760(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<8>    |   12.068(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<9>    |   12.131(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<10>   |   12.780(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<11>   |   12.132(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<12>   |   12.510(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<13>   |   12.511(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<14>   |   12.880(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<15>   |   13.230(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<16>   |    9.885(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<17>   |    9.643(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<18>   |    9.885(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<19>   |    9.869(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<20>   |    9.971(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<21>   |   10.245(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<22>   |   10.263(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<23>   |   10.634(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<24>   |   10.616(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<25>   |   10.963(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<26>   |   11.377(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<27>   |   11.392(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<28>   |   11.761(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<29>   |   12.509(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<30>   |   13.122(R)|FPGA_CLK1_BUFGP   |   0.000|
+MZB_D<31>   |   12.879(R)|FPGA_CLK1_BUFGP   |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock FPGA_CLK1
@@ -116,18 +149,18 @@ Clock to Setup on destination clock FPGA_CLK1
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-FPGA_CLK1      |    8.882|         |         |         |
+FPGA_CLK1      |    9.070|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Feb 22 12:32:24 2012 
+Analysis completed Wed Feb 22 12:56:39 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 162 MB
+Peak Memory Usage: 164 MB
 
 
 

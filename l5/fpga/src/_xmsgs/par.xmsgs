@@ -83,9 +83,6 @@
 <msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">PB&lt;4&gt;_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">MZB_CPLD_BE3_B_IBUF</arg> has no load.  PAR will not attempt to route this signal.
-</msg>
-
 <msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">MZB_CPLD_OE_B_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
@@ -191,11 +188,11 @@
 <msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">AC97_BIT_CLK_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="ParHelpers" num="361" delta="old" >There are <arg fmt="%d" index="1">62</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+<msg type="warning" file="ParHelpers" num="361" delta="old" >There are <arg fmt="%d" index="1">61</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 </msg>
 
-<msg type="warning" file="Par" num="283" delta="old" >There are <arg fmt="%d" index="1">62</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+<msg type="warning" file="Par" num="283" delta="old" >There are <arg fmt="%d" index="1">61</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 </msg>
 
