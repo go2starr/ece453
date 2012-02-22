@@ -196,10 +196,12 @@ WARNING:Xst:646 - Signal <rw_cycle> is assigned but never used. This unconnected
 WARNING:Xst:1780 - Signal <RF<10:1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <select>.
     Found 32-bit register for signal <dout>.
+    Found 32-bit adder for signal <$sub0000> created at line 51.
     Found 32-bit register for signal <RF<0>>.
-    Found 32-bit adder for signal <RF_0$addsub0000> created at line 51.
+    Found 1-bit xor2 for signal <RF_0$xor0000> created at line 51.
+    Found 1-bit xor2 for signal <RF_0$xor0001> created at line 51.
+    Found 1-bit xor2 for signal <RF_0$xor0002> created at line 51.
     Summary:
-	inferred  32 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 Unit <reg_file> synthesized.
 
@@ -440,8 +442,8 @@ Macro Statistics
 # Tristates                                            : 94
  1-bit tristate buffer                                 : 93
  32-bit tristate buffer                                : 1
-# Xors                                                 : 63
- 1-bit xor2                                            : 63
+# Xors                                                 : 66
+ 1-bit xor2                                            : 66
 
 =========================================================================
 
@@ -544,8 +546,8 @@ Macro Statistics
  32-bit adder                                          : 1
 # Registers                                            : 319
  Flip-Flops                                            : 319
-# Xors                                                 : 63
- 1-bit xor2                                            : 63
+# Xors                                                 : 66
+ 1-bit xor2                                            : 66
 
 =========================================================================
 
@@ -778,20 +780,18 @@ Design Statistics
 # IOs                              : 362
 
 Cell Usage :
-# BELS                             : 169
+# BELS                             : 77
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 31
-#      LUT2                        : 58
+#      INV                         : 2
+#      LUT2                        : 61
 #      LUT4                        : 6
-#      MUXCY                       : 37
+#      MUXCY                       : 6
 #      VCC                         : 1
-#      XORCY                       : 32
 # FlipFlops/Latches                : 139
 #      FD                          : 50
-#      FDCE                        : 42
+#      FDCE                        : 29
 #      FDE                         : 25
-#      FDPE                        : 22
+#      FDPE                        : 35
 # Shift Registers                  : 25
 #      SRL16                       : 25
 # Clock Buffers                    : 1
@@ -807,10 +807,10 @@ Device utilization summary:
 
 Selected Device : 3s1500fg676-4 
 
- Number of Slices:                       82  out of  13312     0%  
+ Number of Slices:                       83  out of  13312     0%  
  Number of Slice Flip Flops:            139  out of  26624     0%  
- Number of 4 input LUTs:                123  out of  26624     0%  
-    Number used as logic:                98
+ Number of 4 input LUTs:                 94  out of  26624     0%  
+    Number used as logic:                69
     Number used as Shift registers:      25
  Number of IOs:                         362
  Number of bonded IOBs:                 300  out of    487    61%  
@@ -845,7 +845,7 @@ Asynchronous Control Signals Information:
 -----------------------------------------------------------------------------------+------------------------------------+-------+
 Control Signal                                                                     | Buffer(FF name)                    | Load  |
 -----------------------------------------------------------------------------------+------------------------------------+-------+
-MASTER/myBdu/myRegFile/dout_Acst_inv(MASTER/myBdu/myRegFile/dout_Acst_inv1_INV_0:O)| NONE(MASTER/myBdu/myRegFile/RF_0_0)| 64    |
+MASTER/myBdu/myRegFile/RF_0_Acst_inv(MASTER/myBdu/myRegFile/RF_0_Acst_inv1_INV_0:O)| NONE(MASTER/myBdu/myRegFile/RF_0_0)| 64    |
 -----------------------------------------------------------------------------------+------------------------------------+-------+
 
 Timing Summary:
@@ -864,15 +864,15 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'FPGA_CLK1'
   Clock period: 8.530ns (frequency: 117.234MHz)
-  Total number of paths / destination ports: 2285 / 228
+  Total number of paths / destination ports: 1792 / 228
 -------------------------------------------------------------------------
 Delay:               8.530ns (Levels of Logic = 8)
   Source:            MASTER/myBdu/address_gen[8].sr/out (FF)
-  Destination:       MASTER/myBdu/myRegFile/RF_0_31 (FF)
+  Destination:       MASTER/myBdu/myRegFile/RF_0_0 (FF)
   Source Clock:      FPGA_CLK1 rising
   Destination Clock: FPGA_CLK1 rising
 
-  Data Path: MASTER/myBdu/address_gen[8].sr/out to MASTER/myBdu/myRegFile/RF_0_31
+  Data Path: MASTER/myBdu/address_gen[8].sr/out to MASTER/myBdu/myRegFile/RF_0_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -932,12 +932,12 @@ Offset:              10.876ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.88 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.47 secs
  
 --> 
 
-Total memory usage is 247108 kilobytes
+Total memory usage is 247940 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  350 (   0 filtered)

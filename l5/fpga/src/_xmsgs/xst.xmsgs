@@ -665,436 +665,436 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">sr_rs/out</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">bdu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[3].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[2].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[1].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/be_gen[0].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[31].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[30].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[29].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[28].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[27].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[26].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[25].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[24].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[23].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[22].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[21].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[20].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[19].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[18].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[17].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[16].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[15].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[14].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[13].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[12].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[11].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[10].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[9].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[8].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[7].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[6].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[5].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[4].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[3].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[2].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[1].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/shift_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/shift_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">MASTER/myBdu/data_gen[0].sr/shift_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ece453_top_level</arg>&gt;.
 </msg>
 
 </messages>

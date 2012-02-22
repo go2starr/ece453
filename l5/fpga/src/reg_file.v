@@ -40,7 +40,7 @@ module reg_file(addr,
       if (~rst) begin
          dout <= 32'hfee1dead;
          rw_cycle <= 1'b0;
-         RF[A_RAND] <= 32'b0;
+         RF[A_RAND] <= 32'h12345678;
       end
       
       else if (as) begin
@@ -48,8 +48,7 @@ module reg_file(addr,
 	 if (~rs_n) begin
             if (select == A_RAND) begin
                dout <= RF[A_RAND];
-               RF[A_RAND] <= RF[A_RAND] + 1;
-               //RF[A_RAND] <= (RF[A_RAND] >> 1) ^ (-(RF[A_RAND] & 1) & 32'h80200003);
+               RF[A_RAND] <= (RF[A_RAND] >> 1) ^ (-(RF[A_RAND] & 1) & 32'h80200003);
             end else begin
                dout <= 32'hbeefeade;
             end // if (~rs_n)
