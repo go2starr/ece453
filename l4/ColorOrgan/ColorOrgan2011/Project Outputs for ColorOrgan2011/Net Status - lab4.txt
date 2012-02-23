@@ -1,0 +1,28 @@
+Net Status Report
+Filename     : C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc
+Date         : 2/14/2012
+Time         : 10:48:24 AM
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    3V3, Signal Layers Only, 100mils
+    5V, Signal Layers Only, 455.804mils
+    GND, Signal Layers Only, 288.407mils
+    NetLED100_1, Signal Layers Only, 2088.893mils
+    NetLED100_2, Signal Layers Only, 185.924mils
+    NetLED100_3, Signal Layers Only, 1059.178mils
+    NetLED100_4, Signal Layers Only, 1486.477mils
+    NetLED101_2, Signal Layers Only, 464.625mils
+    NetLED102_2, Signal Layers Only, 1371.089mils
+    NetLED103_2, Signal Layers Only, 759.539mils
+    NetQ104_2, Signal Layers Only, 281.887mils
+    NetQ105_2, Signal Layers Only, 444.083mils
+    NetQ106_2, Signal Layers Only, 696.676mils
+    PIO_0, Signal Layers Only, 403.615mils
+    PIO_1, Signal Layers Only, 691.875mils
+    PIO_2, Signal Layers Only, 1432.836mils
+    PIO_3, Signal Layers Only, 886.1mils
+    PIO_4, Signal Layers Only, 416.081mils
+    PIO_5, Signal Layers Only, 209.133mils
+    PIO_6, Signal Layers Only, 331.914mils
+count : 20

@@ -1,0 +1,97 @@
+Added Component: Designator=LED100(PLCC4)
+Added Component: Designator=LED101(PLCC4)
+Added Component: Designator=LED102(PLCC4)
+Added Component: Designator=LED103(PLCC4)
+Added Component: Designator=P100(HDR2X20)
+Added Component: Designator=Q100(SOT23-3M)
+Added Component: Designator=Q101(SOT23-3M)
+Added Component: Designator=Q102(SOT23-3M)
+Added Component: Designator=Q103(SOT23-3M)
+Added Component: Designator=Q104(SOT23-3M)
+Added Component: Designator=Q105(SOT23-3M)
+Added Component: Designator=Q106(SOT23-3M)
+Added Component: Designator=R100(RESC2012M)
+Added Component: Designator=R101(RESC2012M)
+Added Component: Designator=R102(RESC2012M)
+Added Pin To Net: NetName=3V3 Pin=P100-37
+Added Pin To Net: NetName=3V3 Pin=P100-38
+Added Net: Name=3V3
+Added Pin To Net: NetName=5V Pin=P100-39
+Added Pin To Net: NetName=5V Pin=P100-40
+Added Pin To Net: NetName=5V Pin=Q100-2
+Added Pin To Net: NetName=5V Pin=Q101-2
+Added Pin To Net: NetName=5V Pin=Q102-2
+Added Pin To Net: NetName=5V Pin=Q103-2
+Added Net: Name=5V
+Added Pin To Net: NetName=GND Pin=P100-5
+Added Pin To Net: NetName=GND Pin=P100-6
+Added Pin To Net: NetName=GND Pin=P100-11
+Added Pin To Net: NetName=GND Pin=P100-12
+Added Pin To Net: NetName=GND Pin=P100-17
+Added Pin To Net: NetName=GND Pin=P100-18
+Added Pin To Net: NetName=GND Pin=P100-23
+Added Pin To Net: NetName=GND Pin=P100-24
+Added Pin To Net: NetName=GND Pin=P100-29
+Added Pin To Net: NetName=GND Pin=P100-30
+Added Pin To Net: NetName=GND Pin=P100-35
+Added Pin To Net: NetName=GND Pin=P100-36
+Added Pin To Net: NetName=GND Pin=Q104-2
+Added Pin To Net: NetName=GND Pin=Q105-2
+Added Pin To Net: NetName=GND Pin=Q106-2
+Added Net: Name=GND
+Added Pin To Net: NetName=NetLED100_1 Pin=LED100-1
+Added Pin To Net: NetName=NetLED100_1 Pin=LED101-1
+Added Pin To Net: NetName=NetLED100_1 Pin=LED102-1
+Added Pin To Net: NetName=NetLED100_1 Pin=LED103-1
+Added Pin To Net: NetName=NetLED100_1 Pin=R102-2
+Added Net: Name=NetLED100_1
+Added Pin To Net: NetName=NetLED100_2 Pin=LED100-2
+Added Pin To Net: NetName=NetLED100_2 Pin=Q100-3
+Added Net: Name=NetLED100_2
+Added Pin To Net: NetName=NetLED100_3 Pin=LED100-3
+Added Pin To Net: NetName=NetLED100_3 Pin=LED101-3
+Added Pin To Net: NetName=NetLED100_3 Pin=LED102-3
+Added Pin To Net: NetName=NetLED100_3 Pin=LED103-3
+Added Pin To Net: NetName=NetLED100_3 Pin=R100-2
+Added Net: Name=NetLED100_3
+Added Pin To Net: NetName=NetLED100_4 Pin=LED100-4
+Added Pin To Net: NetName=NetLED100_4 Pin=LED101-4
+Added Pin To Net: NetName=NetLED100_4 Pin=LED102-4
+Added Pin To Net: NetName=NetLED100_4 Pin=LED103-4
+Added Pin To Net: NetName=NetLED100_4 Pin=R101-2
+Added Net: Name=NetLED100_4
+Added Pin To Net: NetName=NetLED102_2 Pin=LED102-2
+Added Pin To Net: NetName=NetLED102_2 Pin=Q102-3
+Added Net: Name=NetLED102_2
+Added Pin To Net: NetName=NetLED103_2 Pin=LED103-2
+Added Pin To Net: NetName=NetLED103_2 Pin=Q103-3
+Added Net: Name=NetLED103_2
+Added Pin To Net: NetName=NetQ104_2 Pin=Q104-3
+Added Pin To Net: NetName=NetQ104_2 Pin=R100-1
+Added Net: Name=NetQ104_2
+Added Pin To Net: NetName=NetQ105_2 Pin=Q105-3
+Added Pin To Net: NetName=NetQ105_2 Pin=R101-1
+Added Net: Name=NetQ105_2
+Added Pin To Net: NetName=NetQ106_2 Pin=Q106-3
+Added Pin To Net: NetName=NetQ106_2 Pin=R102-1
+Added Net: Name=NetQ106_2
+Added Pin To Net: NetName=PIO_0 Pin=P100-1
+Added Pin To Net: NetName=PIO_0 Pin=Q100-1
+Added Net: Name=PIO_0
+Added Pin To Net: NetName=PIO_1 Pin=P100-2
+Added Net: Name=PIO_1
+Added Pin To Net: NetName=PIO_2 Pin=P100-3
+Added Pin To Net: NetName=PIO_2 Pin=Q102-1
+Added Net: Name=PIO_2
+Added Pin To Net: NetName=PIO_3 Pin=P100-4
+Added Pin To Net: NetName=PIO_3 Pin=Q103-1
+Added Net: Name=PIO_3
+Added Pin To Net: NetName=PIO_4 Pin=P100-7
+Added Pin To Net: NetName=PIO_4 Pin=Q104-1
+Added Net: Name=PIO_4
+Added Pin To Net: NetName=PIO_5 Pin=P100-8
+Added Pin To Net: NetName=PIO_5 Pin=Q105-1
+Added Net: Name=PIO_5
+Added Pin To Net: NetName=PIO_6 Pin=P100-9
+Added Pin To Net: NetName=PIO_6 Pin=Q106-1
+Added Net: Name=PIO_6

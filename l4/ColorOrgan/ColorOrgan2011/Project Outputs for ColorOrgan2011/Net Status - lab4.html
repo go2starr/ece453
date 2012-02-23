@@ -1,0 +1,310 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body { 
+			font-family : verdana;
+		}
+		td, th {  
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;	
+		}
+		th { 
+			background-color : #A6CAF0;
+		
+		}
+		th.column1, td.column1 { 
+			text-align: left;
+			width : auto; 
+		}
+		table { 
+			width : 100%; 
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3 {
+			padding-top : 0.1em;
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top
+		}
+		.front_matter_column1 {
+			text-align : right;
+		}
+		.total_column1, .total_column {
+			font-weight : bold;	
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.front_matter_column2 {
+			text-align : center;
+		}
+		.front_matter_column3 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow 
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Net Status Report</title>
+</head>
+<body onload="document.getElementById('radio_mil').click()"><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD 10\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Net Status Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2/14/2012</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">10:48:24 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc" class="file"><acronym title="C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc">C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc</acronym></a></td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Units</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">
+<form><input type="radio" name="radio_units" id="radio_mm" onclick="changeUnits(this, 'mm')">mm<input type="radio" name="radio_units" id="radio_mil" onclick="changeUnits(this, 'mil')">mils</form>
+</td>
+</tr>
+</table>
+<hr><a name="IDASAQ1C"><table>
+<tr>
+<th class="column1">Nets</th>
+<th class="column2">Layer</th>
+<th class="column3">Length</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456.472mil|Location2.X=2523.528mil|Location1.Y=3841.472mil|Location2.Y=4008.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456.472mil|Location2.X=2523.528mil|Location1.Y=3841.472mil|Location2.Y=4008.528mil|Absolute=True">3V3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1000000">100mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2356.472mil|Location2.X=4370.063mil|Location1.Y=3841.472mil|Location2.Y=4734mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2356.472mil|Location2.X=4370.063mil|Location1.Y=3841.472mil|Location2.Y=4734mil|Absolute=True">5V</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4558042">455.804mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2556.472mil|Location2.X=4123.528mil|Location1.Y=3639.937mil|Location2.Y=4008.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2556.472mil|Location2.X=4123.528mil|Location1.Y=3639.937mil|Location2.Y=4008.528mil|Absolute=True">GND</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2884069">288.407mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4357.811mil|Location2.X=5246mil|Location1.Y=3316.472mil|Location2.Y=4091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4357.811mil|Location2.X=5246mil|Location1.Y=3316.472mil|Location2.Y=4091mil|Absolute=True">NetLED100_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="20888930">2088.893mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4369.937mil|Location2.X=4579.629mil|Location1.Y=4031.315mil|Location2.Y=4165.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4369.937mil|Location2.X=4579.629mil|Location1.Y=4031.315mil|Location2.Y=4165.811mil|Absolute=True">NetLED100_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1859243">185.924mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4352.811mil|Location2.X=5174.629mil|Location1.Y=3636.472mil|Location2.Y=4005mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4352.811mil|Location2.X=5174.629mil|Location1.Y=3636.472mil|Location2.Y=4005mil|Absolute=True">NetLED100_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="10591775">1059.178mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4357.811mil|Location2.X=5233.685mil|Location1.Y=3471.472mil|Location2.Y=3983mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4357.811mil|Location2.X=5233.685mil|Location1.Y=3471.472mil|Location2.Y=3983mil|Absolute=True">NetLED100_4</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="14864770">1486.477mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4369.937mil|Location2.X=4779.629mil|Location1.Y=4031.315mil|Location2.Y=4355.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4369.937mil|Location2.X=4779.629mil|Location1.Y=4031.315mil|Location2.Y=4355.811mil|Absolute=True">NetLED101_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4646249">464.625mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4354.937mil|Location2.X=5246mil|Location1.Y=4019mil|Location2.Y=4760.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4354.937mil|Location2.X=5246mil|Location1.Y=4019mil|Location2.Y=4760.811mil|Absolute=True">NetLED102_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="13710892">1371.089mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4364.937mil|Location2.X=4984.629mil|Location1.Y=4031.315mil|Location2.Y=4560.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4364.937mil|Location2.X=4984.629mil|Location1.Y=4031.315mil|Location2.Y=4560.811mil|Absolute=True">NetLED103_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7595386">759.539mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4069.189mil|Location2.X=4337.189mil|Location1.Y=3561.197mil|Location2.Y=3703.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4069.189mil|Location2.X=4337.189mil|Location1.Y=3561.197mil|Location2.Y=3703.528mil|Absolute=True">NetQ104_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2818874">281.887mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3904.189mil|Location2.X=4342.189mil|Location1.Y=3471.472mil|Location2.Y=3640.063mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3904.189mil|Location2.X=4342.189mil|Location1.Y=3471.472mil|Location2.Y=3640.063mil|Absolute=True">NetQ105_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4440834">444.083mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.189mil|Location2.X=4342.189mil|Location1.Y=3316.472mil|Location2.Y=3640.063mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.189mil|Location2.X=4342.189mil|Location1.Y=3316.472mil|Location2.Y=3640.063mil|Absolute=True">NetQ106_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6966763">696.676mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4169mil|Location2.X=4370.063mil|Location1.Y=3941.472mil|Location2.Y=4203.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4169mil|Location2.X=4370.063mil|Location1.Y=3941.472mil|Location2.Y=4203.213mil|Absolute=True">PIO_0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4036149">403.615mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4153mil|Location2.X=4370.063mil|Location1.Y=3841.472mil|Location2.Y=4393.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4153mil|Location2.X=4370.063mil|Location1.Y=3841.472mil|Location2.Y=4393.213mil|Absolute=True">PIO_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6918747">691.875mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4044mil|Location2.X=4355.063mil|Location1.Y=3829mil|Location2.Y=4798.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4044mil|Location2.X=4355.063mil|Location1.Y=3829mil|Location2.Y=4798.213mil|Absolute=True">PIO_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="14328356">1432.836mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4121mil|Location2.X=4365.063mil|Location1.Y=3841.472mil|Location2.Y=4598.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4121mil|Location2.X=4365.063mil|Location1.Y=3841.472mil|Location2.Y=4598.213mil|Absolute=True">PIO_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8861000">886.1mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3956.472mil|Location2.X=4138.213mil|Location1.Y=3639.937mil|Location2.Y=4008.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3956.472mil|Location2.X=4138.213mil|Location1.Y=3639.937mil|Location2.Y=4008.528mil|Absolute=True">PIO_4</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4160807">416.081mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3941.591mil|Location2.X=4023.528mil|Location1.Y=3639.937mil|Location2.Y=3908.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3941.591mil|Location2.X=4023.528mil|Location1.Y=3639.937mil|Location2.Y=3908.528mil|Absolute=True">PIO_5</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2091325">209.133mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3786.591mil|Location2.X=3923.528mil|Location1.Y=3639.937mil|Location2.Y=4008.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\vmware-shared\l4\ColorOrgan\ColorOrgan2011\lab4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3786.591mil|Location2.X=3923.528mil|Location1.Y=3639.937mil|Location2.Y=4008.528mil|Absolute=True">PIO_6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3319143">331.914mils
+			</a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>
