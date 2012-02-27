@@ -94,11 +94,30 @@ module ece453_master_module(
    // ***************************************************************************
    // place all use code below here *********************************************
    // the code below is only example code - edit as needed **********************
-   
+   assign ACC_PORT_PIN[9] = ARM_CLK0;
+   assign ACC_PORT_PIN[10] = CPLD_RS5_B;
+   assign ACC_PORT_PIN[11] = CPLD_WS5_B;
+   assign ACC_PORT_PIN[15:12] = ARM_BE_B[3:0];
+   assign ACC_PORT_PIN[19:17] = ARM_A[2:0];
+   assign ACC_PORT_PIN[23:20] = ARM_D[3:0];
+   assign ACC_PORT_PIN[16] = CPLD_AS;
    
    assign ARM_DTACK = 1'b1;
 
-   bdu myBdu (.addr(ARM_A), .data(ARM_D), .ws_n(CPLD_WS5_B), .rs_n(CPLD_RS5_B), .be(ARM_BE_B), .clk(FPGA_CLK1), .as(CPLD_AS), .rst_n(SYS_RST_N));
-   
+//   bdu myBdu (.addr(ARM_A), .data(ARM_D), .ws_n(CPLD_WS5_B), .rs_n(CPLD_RS5_B), .be(ARM_BE_B), .clk(FPGA_CLK1), .as(CPLD_AS), .rst_n(SYS_RST_N));
 
+   wire [31:0]                            rfDataOut;
+
+   assign ARM_D = (CPLD_AS && ~CPLD_RS5_B) ? rfDataOut : 32'bz;
+
+   reg_file myRegFile (.address(ARM_A),
+                       .data_in(ARM_D),
+                       .data_out(rfDataOut),
+                       .ws_n(CPLD_WS5_B),
+                       .rs_n(CPLD_RS5_B),
+                       .be(ARM_BE_B),
+                       .clk(FPGA_CLK1),
+                       .as(CPLD_AS),
+                       .rst_n(SYS_RST_N));
+   
 endmodule

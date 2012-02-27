@@ -1,3 +1,4 @@
+/* shift_reg.v - basic shift register */
 module shift_reg(input in,
                  output reg out,
                  input clk
