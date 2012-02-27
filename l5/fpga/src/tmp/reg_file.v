@@ -33,7 +33,7 @@ module reg_file(address,
    parameter A_RAND = 0;
 
    // Address decode
-   always begin
+   always @(address) begin
       case (address)
         A_RAND:  select = A_RAND;
       endcase
@@ -49,22 +49,20 @@ module reg_file(address,
       // Chip selected
       else if (as) begin
          // Read
-         if (~rs_n && ws_n) begin
+         if (~rs_n) begin
             // Random
             if (select == A_RAND) begin
                data_out <= registers[select];
-               //data_out <= 32'hdeadbeef;
             end
          end
 
          // Write
-         else if (~ws_n && rs_n) begin
+         else if (~ws_n) begin
             if (select == A_RAND) begin
                registers[select] <= data_in;
-               data_out <= 32'hbeefeade;
             end
          end
-      end
+      end // if (as)
    end 
 endmodule // regFile
 

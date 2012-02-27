@@ -110,14 +110,14 @@ module ece453_master_module(
 
    assign ARM_D = (CPLD_AS && ~CPLD_RS5_B) ? rfDataOut : 32'bz;
 
-   reg_file myRegFile (.address(ARM_A),
-                       .data_in(ARM_D),
-                       .data_out(rfDataOut),
-                       .ws_n(CPLD_WS5_B),
-                       .rs_n(CPLD_RS5_B),
-                       .be(ARM_BE_B),
-                       .clk(FPGA_CLK1),
-                       .as(CPLD_AS),
-                       .rst_n(SYS_RST_N));
+   async_reg_file myRegFile (.address(ARM_A),
+                             .data_in(ARM_D),
+                             .data_out(rfDataOut),
+                             .ws_n(CPLD_WS5_B),
+                             .rs_n(CPLD_RS5_B),
+                             .be(ARM_BE_B),
+                             .clk(FPGA_CLK1),
+                             .as(CPLD_AS),
+                             .rst_n(SYS_RST_N));
    
 endmodule
