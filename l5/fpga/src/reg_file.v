@@ -1,77 +1,75 @@
-/* reg_file - Basic register file */
-module reg_file(addr,
-                din,
-		dout,
+/* regFile.v - Basic register file */
+module reg_file(address,
+                data_in,
+                data_out,
                 ws_n,
                 rs_n,
                 be,
                 clk,
                 as,
-		rst);
+                rst_n);
+   // Inputs
+   input [23:0] address;        // Arm address
+   input [31:0] data_in;        // Data input
+   input        ws_n;           // Write strobe
+   input        rs_n;           // Read strobe
+   input [3:0]  be;             // Byte enable
+   input        clk;            // Clock
+   input        as;             // Chip select
+   input        rst_n;          // Reset
 
-   // Inputs/Outputs
-   input [23:0]  addr;
-   input [31:0]  din;
-   output reg [31:0] dout;
-   input             ws_n, rs_n, clk, as;
-   input [3:0]       be;
-   input             rst;
-
-   // Read/Write state
-   reg               rw_cycle;
-
-   // Address decoding
-   reg [3:0]         select;
+   // Outputs
+   output reg [31:0] data_out;  // Data output
    
-   parameter A_RAND     = 4'd0; // r/w
-   parameter A_JUNK     = 4'd10;
-   
-   always begin
-      case (addr)
-	24'h0:     select = A_RAND;
-	default:   select = A_JUNK;
+   // Register file size
+   parameter REG_FILE_SIZE      = 8; // Register file size
+   parameter LOG_REG_FILE_SIZE  = 3; // Number of internal select bits
+
+   // Internal regs
+   reg [LOG_REG_FILE_SIZE - 1:0] select; // Address decoding   
+   reg [31:0]                    registers [REG_FILE_SIZE - 1:0]; // The registers
+
+   // Address locations
+   parameter A_RAND = 0;
+
+   // Address decode
+   always @(address) begin
+      case (address)
+        A_RAND:  select = A_RAND;
       endcase
    end
    
-   // Reg file
-   reg [31:0]    RF[10:0];
-   
-   always @(posedge clk or negedge rst) begin
-      //reset
-      if (~rst) begin
-         dout <= 32'hfee1dead;
-         rw_cycle <= 1'b0;
-         RF[A_RAND] <= 32'h0;
+   // Clocking registers
+   always @(posedge clk or negedge rst_n) begin
+      // Reset
+      if (~rst_n) begin
+         data_out <= 32'hfee1dead;
       end
-      
+
+      // Chip selected
       else if (as) begin
-	    // Read
-	    if (~rs_n && be[3]) begin
-               if (~rw_cycle) begin
-                  rw_cycle <= 1'b1;
-               
-                  if (select == A_RAND) begin
-                     dout <= RF[A_RAND];
-                     RF[A_RAND] <= (RF[A_RAND] >> 1) ^ (-(RF[A_RAND] & 1) & 32'h80200003);
-                  end else begin
-                     dout <= 32'hbeefeade;
-                  end // if (~rs_n)
-               end
+         // Read
+         if (~rs_n) begin
+            // Random
+            if (select == A_RAND) begin
+               data_out <= registers[select];
             end
-            
-	    // Write
-            else if (~ws_n && ~be[3]) begin
-               if (~rw_cycle) begin
-                  rw_cycle <= 1'b1;
-               
-                  if (select == A_RAND) begin
-                     RF[A_RAND] <= din;
-                  end
-               end
+         end
+
+         // Write
+         else if (~ws_n) begin
+            if (select == A_RAND) begin
+               registers[select] <= data_in;
             end
+         end
       end // if (as)
-      else begin
-         rw_cycle <= 0;
-      end // else: !if(as)
-   end // always @ (posedge clk or negedge rst)
-endmodule // reg_file
+   end 
+endmodule // regFile
+
+  
+       
+   
+   
+   
+   
+   
