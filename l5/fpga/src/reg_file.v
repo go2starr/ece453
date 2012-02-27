@@ -1,3 +1,4 @@
+/* reg_file - Basic register file */
 module reg_file(addr,
                 din,
 		dout,
