@@ -28,7 +28,13 @@ module reg_file(address,
    // Internal regs
    reg [LOG_REG_FILE_SIZE - 1:0] select; // Address decoding   
    reg [31:0]                    registers [REG_FILE_SIZE - 1:0]; // The registers
+   reg                           rw_state;                        // 1 if in read or write
 
+   // Internal wires
+   wire                          rs_en, ws_en;
+   assign rs_en = ~rs_n && ~rw_state;
+   assign ws_en = ~ws_n && ~rw_state;   
+   
    // Address locations
    parameter A_RAND = 0;
 
@@ -38,31 +44,53 @@ module reg_file(address,
         A_RAND:  select = A_RAND;
       endcase
    end
+
+
+   // PRNG
+   function [31:0] next_random;
+      input [31:0] random;
+      next_random = (random >> 1) ^ (-(random & 1) & 32'h80200003);
+   endfunction // if
+      
    
    // Clocking registers
    always @(posedge clk or negedge rst_n) begin
       // Reset
       if (~rst_n) begin
          data_out <= 32'hfee1dead;
+         rw_state <= 1'b0;
       end
 
       // Chip selected
       else if (as) begin
          // Read
-         if (~rs_n) begin
+         if (rs_en) begin
+            // Set rw_state
+            rw_state <= 1'b1;
+            
             // Random
             if (select == A_RAND) begin
                data_out <= registers[select];
+               registers[select] <= next_random(registers[select]);
             end
          end
 
          // Write
-         else if (~ws_n) begin
+         else if (ws_en) begin
+            // Set rw_state
+            rw_state <= 1'b1;
+
+            // Random
             if (select == A_RAND) begin
-               registers[select] <= data_in;
+               registers[select] <= next_random(data_in);
             end
          end
       end // if (as)
+
+      // Not selected - reset rw_cycle
+      else begin
+         rw_state <= 1'b0;
+      end
    end 
 endmodule // regFile
 

@@ -94,13 +94,21 @@ module ece453_master_module(
    // ***************************************************************************
    // place all use code below here *********************************************
    // the code below is only example code - edit as needed **********************
-   assign ACC_PORT_PIN[9] = ARM_CLK0;
-   assign ACC_PORT_PIN[10] = CPLD_RS5_B;
-   assign ACC_PORT_PIN[11] = CPLD_WS5_B;
-   assign ACC_PORT_PIN[15:12] = ARM_BE_B[3:0];
-   assign ACC_PORT_PIN[19:17] = ARM_A[2:0];
-   assign ACC_PORT_PIN[23:20] = ARM_D[3:0];
-   assign ACC_PORT_PIN[16] = CPLD_AS;
+
+   // Port assignments
+   assign ACC_PORT_PIN[9]  = ARM_CLK0;
+   assign ACC_PORT_PIN[10] = ARM_CLK0;
+
+   assign ACC_PORT_PIN[22:15] = ARM_A[7:0];
+   assign ACC_PORT_PIN[30:23] = ARM_D[7:0];
+   
+   assign ACC_PORT_PIN[31] = CPLD_AS;
+   assign ACC_PORT_PIN[32] = CPLD_WS5_B;
+   assign ACC_PORT_PIN[33] = CPLD_RS5_B;   
+   
+   assign ACC_PORT_PIN[37:34] = ARM_BE_B;
+
+
    
    assign ARM_DTACK = 1'b1;
 
