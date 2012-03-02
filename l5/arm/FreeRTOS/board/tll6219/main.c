@@ -150,7 +150,9 @@ void _main(void *parameter)
     
     /* Send checksum back to server */
     netbuf_ref(netbuf, (void*)&chksum, sizeof(chksum));
-    netconn_sendto(conn, netbuf, &addr, PORT);
+
+    if (count_id %2 == 0)
+      netconn_sendto(conn, netbuf, &addr, PORT);
   }
 }
 #endif /* LWIP_NETCON */
