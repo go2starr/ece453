@@ -38,147 +38,119 @@
 #include "lwip/sys.h"
 #include "eth.h"
 
+#include "sha256/sha256sum.h"
+
 #define PORT 2000
-#define NETBUF_SIZE 40
-#define SEED_RQST_BUF_SIZE 8
-#define BLK_SIZE 1
-#define SEED_CMD 1
-#define CHKSM_CMD 3
-#define REG_ADDR (*(volatile unsigned long*) 0xD3000000)
+#define BLOCKSIZE (8192 / 4)
+
 /****************************************************************************
- *
+ *  PRNG
  ****************************************************************************/
-void _main(void* parameter)
+static inline void next_rand(uint32_t *rand) {
+  *rand = (*rand >> 1) ^ (-(*rand & 1) & 0x80200003);
+}
+
+/****************************************************************************
+ *  Structure Definitions
+ ****************************************************************************/
+#define CMD_REQ_SEED 1
+#define BS_8K 0 
+struct req_seed_pkt {
+  uint32_t cmd;
+  uint32_t bs;
+};
+
+struct seed_pkt {
+  uint32_t cmd;
+  uint32_t seed;
+};
+
+struct chksum_pkt {
+  uint32_t cmd;
+  uint32_t count_id;
+  uint32_t sha256[8];
+};
+
+
+/****************************************************************************
+ *  Main
+ ****************************************************************************/
+void _main(void *parameter)
 {
+  /* Network */
   struct netconn *conn;
-  struct netbuf *buf;
-  struct netbuf *seed_rqst_buf;
+  struct netbuf *netbuf;
   struct ip_addr addr;
 
-  uint32_t chksum_pkt_msg[10];
-  uint32_t seed;
+  /* Packet Storage */
+  struct req_seed_pkt req;
+  struct seed_pkt seed;
+  struct chksum_pkt chksum;
 
-  err_t err;
-  unsigned int count = 0; 
+  /* Checksum calculation */
+  uint32_t rand;
+  uint32_t sha256[8];
+  uint32_t block[BLOCKSIZE];
 
-  struct req_seed_pkt {
-    uint32_t command_val;
-    uint32_t block_size;
-  };
+  /* Counters */
+  int i, j, k;
+  uint32_t count_id;
 
-  struct seed_pkt {
-    uint32_t command_val;
-    uint32_t seed;
-  };
-
-  struct chksum_pkt {
-    uint32_t command_val;
-    uint32_t count_id;
-    uint32_t SHA256[8];
-  };
-
-  /* Wait for eth */
+  /* Wait for ethernet up */
   while (!ethIsUp());
 
-  /* Allocate a new connection */
-  printf("Opening a port for connection\n");
+  /* Create connection */
   conn = netconn_new(NETCONN_UDP);
 
-  /* Bind to port */
-  printf("Binding to port %d\n", PORT);
-  err = netconn_bind(conn, NULL, PORT);	
-  if (err != ERR_OK) {
-    printf("Failed to bind to port %d", PORT);
-  }
+  /* Bind */
+  netconn_bind(conn, NULL, PORT);
 
-  /* Fill target IP address */
+  /* Address */
   IP4_ADDR(&addr, 128, 104, 180, 237);
 
-  /* Create a new net buffer */
-  printf("Creating netbufs for checksum packets and seed requests\n");
-  buf = netbuf_new();
-  seed_rqst_buf = netbuf_new();
+  /* Request seed */
+  req.cmd = htonl(CMD_REQ_SEED);
+  req.bs  = htonl(BS_8K);
 
-//  netbuf_alloc(seed_rqst_buf, SEED_RQST_BUF_SIZE);
-//  netbuf_alloc(buf, BUF_SIZE);
+  /* Map packet to netbuf */
+  netbuf = netbuf_new();
+  netbuf_ref(netbuf, (void*)&req, sizeof(req));
 
-  /* Reference buffer for sending checksum pkt */
-//  printf("Creating reference to network buffer\n");
-//  err = netbuf_ref(buf, (void*)chksum_pkt_msg, NETBUF_SIZE);
-//  if (err != ERR_OK) {
-//    printf("Error calling netbuf_ref for buf\n");
-//   return;
-//  } 
+  /* Send data */
+  netconn_sendto(conn, netbuf, &addr, PORT);
 
-  // fill message
-  struct req_seed_pkt rsp;
-  rsp.command_val = htonl(SEED_CMD);
-  rsp.block_size = htonl(BLK_SIZE);
+  /* Listen */
+  netbuf = netconn_recv(conn); 
   
-  //TODO stuff message in buffer
-//  seed_rqst_buf = (void*) req_seed_msg;
+  /* Read */
+  netbuf_copy(netbuf, (void*) &seed, sizeof(seed)); 
 
-  /* Reference buffer for requesiting the seed */
-  printf("Creating reference to req_seed_msg buffer\n");
-  err = netbuf_ref(seed_rqst_buf, &rsp, SEED_RQST_BUF_SIZE);
-  if (err != ERR_OK) {
-    printf("Error calling netbuf_ref for seed_rqst_buf\n");
-    return;
+  ////////////////////////////////////////
+  printf("Seed: 0x%8x\n", seed.seed);
+  ////////////////////////////////////////
+
+  /* Source the seed */
+  rand = ntohl(seed.seed);
+
+  for (count_id = 0; ; count_id++) {
+    /* Fill buffer */
+    for (i = 0; i < BLOCKSIZE; i++) {
+      next_rand(&rand);
+      block[i] = htonl(rand); 
+    }
+    
+    /* Calculate sum */
+    sha256sum(sha256, (void*)block, BLOCKSIZE * 4);
+    
+    /* Fill checksum packet */
+    chksum.cmd = htonl(3);
+    chksum.count_id = htonl(count_id);
+    for (i = 0; i < 8; i++)
+      chksum.sha256[i] = htonl(sha256[i]);
+    
+    /* Send checksum back to server */
+    netbuf_ref(netbuf, (void*)&chksum, sizeof(chksum));
+    netconn_sendto(conn, netbuf, &addr, PORT);
   }
- 
-  // convert between little endian and big endian (htonl & ntohl)
-	// htonl host to network long
-	// ntohl network to host long
-  // send seed request packet to server
-  printf("Sending data to server on Port %d\n", PORT);
-  err = netconn_sendto (conn, seed_rqst_buf, &addr, PORT);
-  if (err != ERR_OK) {
-    printf("Error %d: calling netconn_sendto\n", err);
-    return;
-  }
-   
-  // receive seed from server
-  printf("Waiting for data from server\n");
-  if ((seed_rqst_buf = netconn_recv(conn)) != NULL) {
-    void * data_ptr;
-    netbuf_copy(seed_rqst_buf, data_ptr, sizeof(seed_rqst_buf));
-    printf("Data received");
-
-  } else {
-    printf("Error receiving data: connection closed\n");
-    return;
-  }
-
-  // TODO convert data received using ntohl, pass to SHA unit (or pass to unit, then convert?)
-
-//  void * data_ptr1;
-//  netbuf_copy(seed_rqst_buf, data_ptr, sizeof(seed_rqst_buf));
-//  printf ("%s", (char*) data_ptr)
-//  printf("\nData received");
-  
-
-  // TODO packet received from server -- convert to little endian
-  // Offset0 Command value=1
-  // Offset4 Seed value
-  
-  // seed = ??;
-   netbuf_delete (seed_rqst_buf);
- 
-  // TODO checksum packets sent to server; each time one is sent count++
-  // Offset0 Command value=3
-  // Offset4 Count ID (starts at 0 for first
-  // checksum pkt sent and increments for each subsequent packet
-  // Offset8 - Offset36 SHA256
-
-  // u16_t netbuf_copy ( struct netbuf * aNetBuf, void * aData, u16_t aLen );  
-
-  netbuf_delete (buf);	// doesn't free memory allocated with netbuf_ref
-
-  // NOW, we only send to server, don't ever receive from server again
-
 }
-  
-
-#endif /* LWIP_NETCONN */
-
-
+#endif /* LWIP_NETCON */

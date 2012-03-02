@@ -40,7 +40,7 @@ OUTPUT_FILE = demo
 VPATH = ./lwip
 INCLUDES = -I. -I./lwip
 S_FILES = board_asm.S
-C_FILES = board.c libc_glue.c main.c uart.c eth.c sys_arch.c
+C_FILES = board.c libc_glue.c main.c uart.c eth.c sys_arch.c ./sha256/sha256sum.c
 
 ##############################################################################
 # RTOS build stuff...
