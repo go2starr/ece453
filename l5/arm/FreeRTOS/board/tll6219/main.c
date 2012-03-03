@@ -41,7 +41,12 @@
 #include "sha256/sha256sum.h"
 
 #define PORT 2000
-#define BLOCKSIZE (8192 / 4)
+
+/****************************************************************************
+ *  Block Sizes
+ ****************************************************************************/
+#define BS_KEY 1
+#define BLOCKSIZE (8192 * (BS_KEY + 1) / 4)
 
 /****************************************************************************
  *  PRNG
@@ -54,7 +59,6 @@ static inline void next_rand(uint32_t *rand) {
  *  Structure Definitions
  ****************************************************************************/
 #define CMD_REQ_SEED 1
-#define BS_8K 0 
 struct req_seed_pkt {
   uint32_t cmd;
   uint32_t bs;
@@ -110,7 +114,7 @@ void _main(void *parameter)
 
   /* Request seed */
   req.cmd = htonl(CMD_REQ_SEED);
-  req.bs  = htonl(BS_8K);
+  req.bs  = htonl(BS_KEY);
 
   /* Map packet to netbuf */
   netbuf = netbuf_new();
