@@ -30,7 +30,7 @@
 #
 ##############################################################################
 CROSS_COMPILE = /opt/arm-2011.03/bin/arm-none-eabi-
-C_FLAGS = -Wall -O2 -mcpu=arm926ej-s -fno-strict-aliasing
+C_FLAGS = -Wall -O3 -mcpu=arm926ej-s -fno-strict-aliasing
 LD_FLAGS = --section-start=.init=0xC0200000
 
 ##############################################################################
