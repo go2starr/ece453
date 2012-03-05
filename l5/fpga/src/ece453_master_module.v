@@ -127,5 +127,9 @@ module ece453_master_module(
                              .clk(FPGA_CLK1),
                              .as(CPLD_AS),
                              .rst_n(SYS_RST_N));
-   
+
+
+   // ARM IRQ <-> PORT F16
+   assign ARM_IRQ = PB[0];
+
 endmodule

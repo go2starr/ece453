@@ -38,6 +38,8 @@
 #include "lwip/sys.h"
 #include "eth.h"
 
+#include "iodefine.h"
+
 #include "sha256/sha256sum.h"
 
 #define PORT 2000
@@ -99,6 +101,17 @@ void _main(void *parameter)
   /* Counters */
   int i, j, k;
   uint32_t count_id;
+
+
+  /* /\* Configure GPIO *\/ */
+  /* PTF_DDIR = 0;                 /\* GPIO as input *\/ */
+  /* PTF_ICONFA2 = 1;              /\* Pin 16 as interrupt status *\/ */
+  /* PTF_ICONFB2 = 1;              /\* Pin 16 as interrupt status *\/ */
+  /* PTF_IMR = 1;                  /\* Unmask interrupt on pin 0 *\/ */
+  /* PTF_ICR1 = 0;                 /\* Rising edge sensitive *\/ */
+
+  /* /\* Configure interrupts *\/ */
+  /* INTSRCL |= 1 << 8;            /\* Enable GPIO interrupt source *\/ */
 
   /* Wait for ethernet up */
   while (!ethIsUp());
