@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-03-05T14:57:05</DateModified>
+  <DateModified>2012-03-05T15:57:12</DateModified>
   <ModuleName>ece453_top_level</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/vmware-shared/ece453/l5/fpga/lab5Katelyn/iseconfig/ece453_top_level.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/vmware-shared/ece453/l5/fpga/lab5Katelyn</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/vmware-shared/ece453/l5/fpga/lab5Katelyn\</ImplementationReportsDirectory>
   <DateInitialized>2012-03-05T14:57:05</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>

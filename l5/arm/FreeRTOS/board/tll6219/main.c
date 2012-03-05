@@ -142,10 +142,10 @@ void _main(void *parameter)
       next_rand(&rand);
       block[i] = htonl(rand); 
     }
-    
-    if ((i % 1000) == 0) {
+   
+   if ((count_id % 100) == 0) {
       LED = 1;
-    }
+   }
     /* Calculate sum */
     sha256sum(sha256, (void*)block, BLOCKSIZE * 4);
     
