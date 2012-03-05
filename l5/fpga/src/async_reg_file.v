@@ -13,7 +13,8 @@ module async_reg_file(
                       be,
                       clk,
                       as,
-                      rst_n
+                      rst_n,
+							 led_out
                       );
    // Inputs
    input [23:0] address;        // Arm address
@@ -27,6 +28,7 @@ module async_reg_file(
 
    // Outputs
    output [31:0] data_out;      // Data output
+   output [7:0] led_out;	// LED output
    
    // Register file size
    parameter REG_FILE_SIZE      = 8; // Register file size
@@ -51,7 +53,8 @@ module async_reg_file(
                 .be(be),
                 .clk(clk),
                 .as(as_clkd),
-                .rst_n(rst_n));
+                .rst_n(rst_n),
+                .led_out(led_out));
 endmodule // async_reg_file
 
                 

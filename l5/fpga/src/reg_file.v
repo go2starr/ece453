@@ -7,7 +7,9 @@ module reg_file(address,
                 be,
                 clk,
                 as,
-                rst_n);
+                rst_n,
+					 led_out
+					 );
    // Inputs
    input [23:0] address;        // Arm address
    input [31:0] data_in;        // Data input
@@ -20,6 +22,7 @@ module reg_file(address,
 
    // Outputs
    output reg [31:0] data_out;  // Data output
+   output reg [7:0] led_out;	// LED output
    
    // Register file size
    parameter REG_FILE_SIZE      = 8; // Register file size
@@ -37,11 +40,13 @@ module reg_file(address,
    
    // Address locations
    parameter A_RAND = 0;
+   parameter LED = 4;
 
    // Address decode
    always @(address) begin
       case (address)
         A_RAND:  select = A_RAND;
+        LED: select = LED;
       endcase
    end
 
@@ -59,6 +64,8 @@ module reg_file(address,
       if (~rst_n) begin
          data_out <= 32'hfee1dead;
          rw_state <= 1'b0;
+ 	 registers[LED] <= 8'b1;
+	 led_out <= 8'b0;
       end
 
       // Chip selected
@@ -83,6 +90,11 @@ module reg_file(address,
             // Random
             if (select == A_RAND) begin
                registers[select] <= next_random(data_in);
+            end
+            else if (select == LED) begin
+               led_out <= registers[select];
+               registers[select] <= (registers[select] << 1'b1);
+               if (registers[select] == 8'b10000000) registers[select] <= 8'b01;
             end
          end
       end // if (as)
