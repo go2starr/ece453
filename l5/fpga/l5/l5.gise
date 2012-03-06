@@ -77,6 +77,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1330992136" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1330992136">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1330992136" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6092007452714092454" xil_pn:start_ts="1330992136">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -177,11 +178,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1330997214" xil_pn:in_ck="8366376491485835775" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="-2635841387707318536" xil_pn:start_ts="1330997211">
+    <transform xil_pn:end_ts="1331048753" xil_pn:in_ck="8366376491485835775" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="-2635841387707318536" xil_pn:start_ts="1331048752">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1330997802" xil_pn:in_ck="166529168410025427" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1330997799">
       <status xil_pn:value="SuccessfullyRun"/>

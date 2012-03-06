@@ -126,6 +126,7 @@
  ****************************************************************************/
 static xSemaphoreHandle rxLock = NULL;
 static xSemaphoreHandle txLock = NULL;
+extern xSemaphoreHandle pLock;
 static struct netif netif;
 
 #if configUSE_DHCP == 1
@@ -241,6 +242,9 @@ static void ethISR()
    if (PTF_ISR & (1<<16)) {
      PTF_ISR |= 1<<16;       /* Clear */
      printf("INT\n");
+     /* Let print routine run */
+     portBASE_TYPE yield1 = pdFALSE;
+     xSemaphoreGiveFromISR(pLock, &yield1);
    }
 
    if (status & 0x00040000)

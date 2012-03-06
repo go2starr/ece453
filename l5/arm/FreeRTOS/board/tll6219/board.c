@@ -47,6 +47,7 @@
  *
  ****************************************************************************/
 extern void _main(void* ptr);
+extern void _print(void* ptr);
 
 /****************************************************************************
  *
@@ -54,6 +55,7 @@ extern void _main(void* ptr);
 extern uint32_t vectorTable[];
 static uint32_t ALIGNED(4096) pageTable0[1024];
 static uint32_t ALIGNED(16384) baseTable[4096];
+xSemaphoreHandle pLock;
 
 /****************************************************************************
  *
@@ -157,9 +159,15 @@ int boardInit0()
    NIPRIORITY3 |= (configTIMER_INTERRUPT_PRIORITY & 0xF) << 8;
    INTENNUM = 26;
 
+   /* Initialize lock */
+   pLock = xSemaphoreCreateCounting(1,0);
+
    xTaskCreate(_main, (signed char*) "main", configMINIMAL_STACK_SIZE, NULL,
                configMAX_PRIORITIES - 1, NULL);
-
+   
+   xTaskCreate(_print, (signed char*) "print", configMINIMAL_STACK_SIZE, NULL,
+               configMAX_PRIORITIES - 1, NULL);
+   
    vTaskStartScheduler();
 
    return 0;

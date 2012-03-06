@@ -111,9 +111,6 @@ void _main(void *parameter)
   PTF_IMR  |= (1 << 16);       /* Unmask interrupt on pin 0 */
   PMASK |= 1 << 5;             /* Unmask port register */
   
-  while (1) {
-  }
-
   /* Wait for ethernet up */
   while (!ethIsUp());
 
