@@ -152,7 +152,7 @@ int boardInit0()
    PCCR1 |= 0x02000000;
    TPRER1 = 0;
    TCMP1 = configCPU_FREQUENCY / (((PCDR1 & 0x0000003F) + 1) * 
-           configTICK_RATE_HZ);
+           configTICK_RATE_HZ) * 10;
    TCTL1 = 0x00000013;
    configIRQ_HANDLER(26) = timerISR;
    NIPRIORITY3 &= 0xFFFFF0FF;
