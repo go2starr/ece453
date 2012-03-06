@@ -132,5 +132,6 @@ module ece453_master_module(
 
    // ARM IRQ <-> PORT F16
    assign ARM_IRQ = PB[0];
+   
 
 endmodule

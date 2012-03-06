@@ -238,11 +238,16 @@ static void ethISR()
 {
    uint32_t status = REG_BASE[INT_STS];
 
-   if (status & 0x00040000)
-   {
-      uint16_t bmsr = miiRead(PHY_ADDR, MII_BMSR);
-      const char* speed = "unknown speed";
+   if (PTF_ISR & (1<<16)) {
+     PTF_ISR |= 1<<16;       /* Clear */
+     printf("INT\n");
+   }
 
+   if (status & 0x00040000)
+     {
+       uint16_t bmsr = miiRead(PHY_ADDR, MII_BMSR);
+       const char* speed = "unknown speed";
+       
       /* You should always avoid printing from interrupt service routines,
        * but link state changes should be very rare.
        */
