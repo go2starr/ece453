@@ -95,24 +95,8 @@ module ece453_master_module(
    // place all use code below here *********************************************
    // the code below is only example code - edit as needed **********************
 
-   // Port assignments
-   assign ACC_PORT_PIN[9]  = ARM_CLK0;
-   assign ACC_PORT_PIN[10] = ARM_CLK0;
-
-   assign ACC_PORT_PIN[22:15] = ARM_A[7:0];
-   assign ACC_PORT_PIN[30:23] = ARM_D[7:0];
-   
-   assign ACC_PORT_PIN[31] = CPLD_AS;
-   assign ACC_PORT_PIN[32] = CPLD_WS5_B;
-   assign ACC_PORT_PIN[33] = CPLD_RS5_B;   
-   
-   assign ACC_PORT_PIN[37:34] = ARM_BE_B;
-
-
    
    assign ARM_DTACK = 1'b1;
-
-//   bdu myBdu (.addr(ARM_A), .data(ARM_D), .ws_n(CPLD_WS5_B), .rs_n(CPLD_RS5_B), .be(ARM_BE_B), .clk(FPGA_CLK1), .as(CPLD_AS), .rst_n(SYS_RST_N));
 
    wire [31:0]                            rfDataOut;
 
